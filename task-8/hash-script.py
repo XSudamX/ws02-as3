@@ -10,6 +10,7 @@ import crypt
 #Config
 password=sys.argv[1]
 hashedValue=crypt.crypt(password, crypt.mksalt(crypt.METHOD_SHA512))
+#salt is secure and generated from mksalt in cryptpackage
 
 #Output
 print('Value to be hashed :',sys.argv[1])
