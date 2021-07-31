@@ -1,0 +1,19 @@
+Gen AES key to encrypt file:
+openssl rand -out key.bin -hex 64
+
+Encrypt file with gen AES key:
+openssl enc -aes-256-cbc -salt -in nistspecialpublication800-100.pdf -out encryptedpdf.enc -pass file:./key.bin
+
+Encrypt generated AES key with provided public key:
+openssl rsautl -encrypt -inkey public.pem -pubin -in key.bin -out key.bin.enc
+
+The end user can now use his private key to decrypt the encrypted AES Key file, which he can use to decrypt the encrypted pdf file.
+This can be done as follows;
+
+Decrypt AES Key:
+openssl rsautl -decrypt -inkey private.pem -in key.bin.enc -out key.bin
+
+Decrypt PDF using AES Key:
+openssl enc -d -aes-256-cbc -in encryptedpdf.enc -out decryptedpdf.pdf -pass file:/key.bin
+
+:)

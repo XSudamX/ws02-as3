@@ -1,0 +1,5 @@
+Generate Hash:
+sha512sum nistspecialpublication800-100.pdf > checksumfile
+
+Check Integrity with Hash:
+shasum -a 512 -c checksumfile

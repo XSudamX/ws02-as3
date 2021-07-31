@@ -1,0 +1,1 @@
+openssl enc -aes-256-cbc -in nistspecialpublication800-100.pdf -out encryptedpdf.enc -md sha256

@@ -1,0 +1,1 @@
+openssl enc -aes-256-cbc -in nistspecialpublication800-100.pdf -out encryptedpdf.enc -md sha256 -iv "4702A2949A628E975C12A0CD459E2646" -K "458354644CC9C1AFB8E6F3C6DC90B2734C5B19E5BBB839A870B81125C3208320" -k "wso2training"
