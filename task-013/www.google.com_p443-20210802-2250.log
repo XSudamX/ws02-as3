@@ -1,0 +1,1237 @@
+## Scan started as: "testssl --parallel --log www.google.com"
+## at prod-devops-master:/usr/bin/openssl
+## version testssl: 3.0 25e8381 from 2021-08-02
+## version openssl: "1.1.1f" from "Apr 28 00:37:28 2021")
+
+[1mTesting all IPv4 addresses (port 443): [m142.251.12.147 142.251.12.104 142.251.12.99 142.251.12.105 142.251.12.106 142.251.12.103
+------------------------------------------------------------------------------------------------------------------------------------
+[7m Start 2021-08-02 22:50:21        -->> 142.251.12.147:443 (www.google.com) <<--[m
+
+ Further IP addresses:   142.251.12.103 142.251.12.106 142.251.12.105 142.251.12.99 142.251.12.104 2404:6800:4003:c01::69 2404:6800:4003:c01::93 2404:6800:4003:c01::6a 2404:6800:4003:c01::68 
+ rDNS (142.251.12.147):  --
+ Service detected:       HTTP
+
+
+[1m[4m Testing protocols [m[4mvia sockets except NPN+ALPN [m
+
+[1m SSLv2      [m[1;32mnot offered (OK)[m
+[1m SSLv3      [m[1;32mnot offered (OK)[m
+[1m TLS 1      [m[1;33moffered[m (deprecated)
+[1m TLS 1.1    [m[1;33moffered[m (deprecated)
+[1m TLS 1.2    [m[1;32moffered (OK)[m
+[1m TLS 1.3    [m[1;32moffered (OK)[m: final
+[1m NPN/SPDY   [mnot offered
+[1m ALPN/HTTP2 [m[0;32mh2[m, http/1.1, grpc-exp (offered)
+
+[1m[4m Testing cipher categories [m
+
+[1m NULL ciphers (no encryption)                  [m[1;32mnot offered (OK)[m
+[1m Anonymous NULL Ciphers (no authentication)    [m[1;32mnot offered (OK)[m
+[1m Export ciphers (w/o ADH+NULL)                 [m[1;32mnot offered (OK)[m
+[1m LOW: 64 Bit + DES, RC[2,4] (w/o export)       [m[0;32mnot offered (OK)[m
+[1m Triple DES Ciphers / IDEA                     [m[0;33moffered[m
+[1m Obsolete: SEED + 128+256 Bit CBC cipher       [m[1;33moffered[m
+[1m Strong encryption (AEAD ciphers)              [m[1;32moffered (OK)[m
+
+
+[1m[4m Testing robust (perfect) forward secrecy[m[4m, (P)FS -- omitting Null Authentication/Encryption, 3DES, RC4 [m
+
+[0;32m PFS is offered (OK)[m          TLS_AES_256_GCM_SHA384 TLS_CHACHA20_POLY1305_SHA256 ECDHE-RSA-AES256-GCM-SHA384 ECDHE-ECDSA-AES256-GCM-SHA384 ECDHE-RSA-AES256-SHA ECDHE-ECDSA-AES256-SHA
+                              ECDHE-ECDSA-CHACHA20-POLY1305 ECDHE-RSA-CHACHA20-POLY1305 TLS_AES_128_GCM_SHA256 ECDHE-RSA-AES128-GCM-SHA256 ECDHE-ECDSA-AES128-GCM-SHA256 ECDHE-RSA-AES128-SHA
+                              ECDHE-ECDSA-AES128-SHA 
+[1m Elliptic curves offered:     [m[0;32mprime256v1[m [0;32mX25519[m 
+
+
+[1m[4m Testing server preferences [m
+
+[1m Has server cipher order?     [m[0;32myes (OK)[m -- only for < TLS 1.3
+[1m Negotiated protocol          [m[1;32mTLSv1.3[m
+[1m Negotiated cipher            [m[1;32mTLS_AES_256_GCM_SHA384[m, [0;32m253 bit ECDH (X25519)[m
+[1m Cipher order[m
+    TLSv1:     ECDHE-ECDSA-AES128-SHA ECDHE-ECDSA-AES256-SHA ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-SHA AES128-SHA AES256-SHA DES-CBC3-SHA 
+    TLSv1.1:   ECDHE-ECDSA-AES128-SHA ECDHE-ECDSA-AES256-SHA ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-SHA AES128-SHA AES256-SHA DES-CBC3-SHA 
+    TLSv1.2:   ECDHE-ECDSA-CHACHA20-POLY1305 ECDHE-ECDSA-AES128-GCM-SHA256 ECDHE-ECDSA-AES256-GCM-SHA384 ECDHE-ECDSA-AES128-SHA ECDHE-ECDSA-AES256-SHA ECDHE-RSA-CHACHA20-POLY1305
+               ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-SHA AES128-GCM-SHA256 AES256-GCM-SHA384 AES128-SHA AES256-SHA DES-CBC3-SHA 
+
+
+[1m[4m Testing server defaults (Server Hello) [m
+
+[1m TLS extensions (standard)    [m"renegotiation info/#65281" "EC point formats/#11" "next protocol/#13172" "key share/#51" "supported versions/#43" "extended master secret/#23"
+                              "application layer protocol negotiation/#16"
+[1m Session Ticket RFC 5077 hint [mno -- no lifetime advertised
+[1m SSL Session ID support       [myes
+[1m Session Resumption           [mTickets no, ID: yes
+[1m TLS clock skew[m               0 sec from localtime
+
+  [1m[4mServer Certificate #1[m
+  [1m Signature Algorithm          [m[0;32mSHA256 with RSA[m
+  [1m Server key size              [mRSA 2048 bits
+  [1m Server key usage             [mDigital Signature, Key Encipherment
+  [1m Server extended key usage    [mTLS Web Server Authentication
+  [1m Serial / Fingerprints        [mACD73447EE5167780300000000CC58E6 / SHA1 93C5EF1413D058704F4F3C5BE8A57FFC782966C7
+                                SHA256 FFCF8D78FDE7D15721025974632B74254A88A89C6170344698E29EE7F1FE1EB0
+  [1m Common Name (CN)             [m[3mwww.google.com [m
+  [1m subjectAltName (SAN)         [m[3mwww.google.com [m
+  [1m Issuer                       [m[3mGTS CA 1O1[m ([3mGoogle Trust Services[m from [3mUS[m)
+  [1m Trust (hostname)             [m[0;32mOk via SAN[m (same w/o SNI)
+  [1m Chain of trust[m               [0;32mOk   [m[0;35m[m
+  [1m EV cert[m (experimental)       no 
+  [1m ETS/"eTLS"[m, visibility info  not present
+  [1m Certificate Validity (UTC)   [m[0;33mexpires < 60 days (48)[m (2021-06-28 09:42 --> 2021-09-20 09:42)
+  [1m # of certificates provided[m   2
+  [1m Certificate Revocation List  [mhttp://crl.pki.goog/GTS1O1core.crl
+  [1m OCSP URI                     [mhttp://ocsp.pki.goog/gts1o1core
+  [1m OCSP stapling                [m[1;33mnot offered[m
+  [1m OCSP must staple extension   [m--
+  [1m DNS CAA RR[m (experimental)    [0;32mavailable[m - please check for match with "Issuer" above: [3missue=pki.goog[m
+  [1m Certificate Transparency     [m[0;32myes[m (certificate extension)
+
+  [1m[4mServer Certificate #2[m
+  [1m Signature Algorithm          [m[0;32mSHA256 with RSA[m
+  [1m Server key size              [mEC [0;32m256[m bits
+  [1m Server key usage             [mDigital Signature
+  [1m Server extended key usage    [mTLS Web Server Authentication
+  [1m Serial / Fingerprints        [m4E5A45D05E6C7C6F0300000000CC58E7 / SHA1 9F0E422D88E47BDF0866471663480284A489DE8E
+                                SHA256 58CB2EC05207C490C688A7464BF245EDA35F248D50DC25A12BB65655A2FC9F8E
+  [1m Common Name (CN)             [m[3mwww.google.com [m
+  [1m subjectAltName (SAN)         [m[3mwww.google.com [m
+  [1m Issuer                       [m[3mGTS CA 1O1[m ([3mGoogle Trust Services[m from [3mUS[m)
+  [1m Trust (hostname)             [m[0;32mOk via SAN[m (same w/o SNI)
+  [1m Chain of trust[m               [0;32mOk   [m[0;35m[m
+  [1m EV cert[m (experimental)       no 
+  [1m ETS/"eTLS"[m, visibility info  not present
+  [1m Certificate Validity (UTC)   [m[0;33mexpires < 60 days (48)[m (2021-06-28 09:42 --> 2021-09-20 09:42)
+  [1m # of certificates provided[m   2
+  [1m Certificate Revocation List  [mhttp://crl.pki.goog/GTS1O1core.crl
+  [1m OCSP URI                     [mhttp://ocsp.pki.goog/gts1o1core
+  [1m OCSP stapling                [m[1;33mnot offered[m
+  [1m OCSP must staple extension   [m--
+  [1m DNS CAA RR[m (experimental)    [0;32mavailable[m - please check for match with "Issuer" above: [3missue=pki.goog[m
+  [1m Certificate Transparency     [m[0;32myes[m (certificate extension)
+
+
+[1m[4m Testing HTTP header response @ "/" [m
+
+[1m HTTP Status Code           [m  200 OK
+[1m HTTP clock skew              [m0 sec from localtime
+[1m Strict Transport Security    [m[1;33mnot offered[m
+[1m Public Key Pinning           [m--
+[1m Server banner                [mgws
+[1m Application banner           [m--
+[1m Cookie(s)                    [m2 issued: [0;32m1/2[m secure, [0;32m1/2[m HttpOnly
+[1m Security headers             [m[0;32mX-Frame-Options[m SAMEORIGIN
+                              [0;32mX-XSS-Protection[m 0
+                              [0;36mCache-Control[m private, max-age=0
+[1m Reverse Proxy banner         [m--
+
+
+[1m[4m Testing vulnerabilities [m
+
+[1m Heartbleed[m (CVE-2014-0160)                [1;32mnot vulnerable (OK)[m, no heartbeat extension
+[1m CCS[m (CVE-2014-0224)                       [1;32mnot vulnerable (OK)[m
+[1m Ticketbleed[m (CVE-2016-9244), experiment.  [1;32mnot vulnerable (OK)[m, no session ticket extension
+[1m ROBOT                                     [m[1;32mnot vulnerable (OK)[m
+[1m Secure Renegotiation (RFC 5746)           [m[1;32msupported (OK)[m
+[1m Secure Client-Initiated Renegotiation     [m[0;32mnot vulnerable (OK)[m
+[1m CRIME, TLS [m(CVE-2012-4929)                [0;32mnot vulnerable (OK)[m
+[1m BREACH[m (CVE-2013-3587)                    [0;31mpotentially NOT ok, uses gzip HTTP compression.[m - only supplied "/" tested
+                                           Can be ignored for static pages or if no secrets in the page
+[1m POODLE, SSL[m (CVE-2014-3566)               [1;32mnot vulnerable (OK)[m, no SSLv3 support
+[1m TLS_FALLBACK_SCSV[m (RFC 7507)              [0;35mCheck failed, unexpected result [m, run testssl -Z --debug=1 and look at /tmp/testssl.FvKM9u/*tls_fallback_scsv.txt
+[1m SWEET32[m (CVE-2016-2183, CVE-2016-6329)    [1;33mVULNERABLE[m, uses 64 bit block ciphers
+[1m FREAK[m (CVE-2015-0204)                     [1;32mnot vulnerable (OK)[m
+[1m DROWN[m (CVE-2016-0800, CVE-2016-0703)      [1;32mnot vulnerable on this host and port (OK)[m
+                                           make sure you don't use this certificate elsewhere with SSLv2 enabled services
+                                           https://censys.io/ipv4?q=FFCF8D78FDE7D15721025974632B74254A88A89C6170344698E29EE7F1FE1EB0 could help you to find out
+[1m LOGJAM[m (CVE-2015-4000), experimental      [0;32mnot vulnerable (OK):[m no DH EXPORT ciphers, no DH key detected with <= TLS 1.2
+[1m BEAST[m (CVE-2011-3389)                     TLS1: [1;33mECDHE-ECDSA-AES128-SHA ECDHE-ECDSA-AES256-SHA ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-SHA AES128-SHA AES256-SHA DES-CBC3-SHA [m
+                                           [1;33mVULNERABLE[m -- but also supports higher protocols  TLSv1.1 TLSv1.2 (likely mitigated)
+[1m LUCKY13[m (CVE-2013-0169), experimental     potentially [1;33mVULNERABLE[m, uses cipher block chaining (CBC) ciphers with TLS. Check patches
+[1m RC4[m (CVE-2013-2566, CVE-2015-2808)        [0;32mno RC4 ciphers detected (OK)[m
+
+
+[1m[4m Testing 370 ciphers via OpenSSL plus sockets against the server, ordered by encryption strength [m
+
+Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Cipher Suite Name (IANA/RFC)
+-----------------------------------------------------------------------------------------------------------------------------
+ x1302   TLS_AES_256_GCM_SHA384            ECDH[0;32m 253[m   AESGCM      256      TLS_AES_256_GCM_SHA384                             
+ x1303   TLS_CHACHA20_POLY1305_SHA256      ECDH[0;32m 253[m   ChaCha20    256      TLS_CHACHA20_POLY1305_SHA256                       
+ xc030   ECDHE-RSA-AES256-GCM-SHA384       ECDH[0;32m 253[m   AESGCM      256      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384              
+ xc02c   ECDHE-ECDSA-AES256-GCM-SHA384     ECDH[0;32m 253[m   AESGCM      256      TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384            
+ xc014   ECDHE-RSA-AES256-SHA              ECDH[0;32m 253[m   AES         256      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA                 
+ xc00a   ECDHE-ECDSA-AES256-SHA            ECDH[0;32m 253[m   AES         256      TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA               
+ xcca9   ECDHE-ECDSA-CHACHA20-POLY1305     ECDH[0;32m 253[m   ChaCha20    256      TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256      
+ xcca8   ECDHE-RSA-CHACHA20-POLY1305       ECDH[0;32m 253[m   ChaCha20    256      TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256        
+ x9d     AES256-GCM-SHA384                 RSA        AESGCM      256      TLS_RSA_WITH_AES_256_GCM_SHA384                    
+ x35     AES256-SHA                        RSA        AES         256      TLS_RSA_WITH_AES_256_CBC_SHA                       
+ x1301   TLS_AES_128_GCM_SHA256            ECDH[0;32m 253[m   AESGCM      128      TLS_AES_128_GCM_SHA256                             
+ xc02f   ECDHE-RSA-AES128-GCM-SHA256       ECDH[0;32m 253[m   AESGCM      128      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256              
+ xc02b   ECDHE-ECDSA-AES128-GCM-SHA256     ECDH[0;32m 253[m   AESGCM      128      TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256            
+ xc013   ECDHE-RSA-AES128-SHA              ECDH[0;32m 253[m   AES         128      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA                 
+ xc009   ECDHE-ECDSA-AES128-SHA            ECDH[0;32m 253[m   AES         128      TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA               
+ x9c     AES128-GCM-SHA256                 RSA        AESGCM      128      TLS_RSA_WITH_AES_128_GCM_SHA256                    
+ x2f     AES128-SHA                        RSA        AES         128      TLS_RSA_WITH_AES_128_CBC_SHA                       
+ x0a     DES-CBC3-SHA                      RSA        3DES        168      TLS_RSA_WITH_3DES_EDE_CBC_SHA                      
+
+
+[1m[4m Running client simulations [m[1m[4m(HTTP) [m[1m[4mvia sockets [m
+
+ Android 4.4.2                TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Android 5.0.0                TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Android 6.0                  TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Android 7.0                  TLSv1.2 ECDHE-ECDSA-CHACHA20-POLY1305, [0;32m253 bit ECDH (X25519)[m
+ Android 8.1 (native)         TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m253 bit ECDH (X25519)[m
+ Android 9.0 (native)         TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Android 10.0 (native)        TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Chrome 74 (Win 10)           TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Chrome 79 (Win 10)           TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Firefox 66 (Win 8.1/10)      TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Firefox 71 (Win 10)          TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ IE 6 XP                      No connection
+ IE 8 Win 7                   TLSv1.0 ECDHE-ECDSA-AES128-SHA, [0;32m256 bit ECDH (P-256)[m
+ IE 8 XP                      TLSv1.0 DES-CBC3-SHA, No FS
+ IE 11 Win 7                  TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ IE 11 Win 8.1                TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ IE 11 Win Phone 8.1          TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ IE 11 Win 10                 TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Edge 15 Win 10               TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m253 bit ECDH (X25519)[m
+ Edge 17 (Win 10)             TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m253 bit ECDH (X25519)[m
+ Opera 66 (Win 10)            TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Safari 9 iOS 9               TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Safari 9 OS X 10.11          TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Safari 10 OS X 10.12         TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Safari 12.1 (iOS 12.2)       TLSv1.3 TLS_CHACHA20_POLY1305_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Safari 13.0 (macOS 10.14.6)  TLSv1.3 TLS_CHACHA20_POLY1305_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Apple ATS 9 iOS 9            TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Java 6u45                    TLSv1.0 AES128-SHA, No FS
+ Java 7u25                    TLSv1.0 ECDHE-ECDSA-AES128-SHA, [0;32m256 bit ECDH (P-256)[m
+ Java 8u161                   TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Java 11.0.2 (OpenJDK)        TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Java 12.0.1 (OpenJDK)        TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m256 bit ECDH (P-256)[m
+ OpenSSL 1.0.2e               TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ OpenSSL 1.1.0l (Debian)      TLSv1.2 ECDHE-ECDSA-CHACHA20-POLY1305, [0;32m253 bit ECDH (X25519)[m
+ OpenSSL 1.1.1d (Debian)      TLSv1.3 TLS_AES_256_GCM_SHA384, [0;32m253 bit ECDH (X25519)[m
+ Thunderbird (68.3)           TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+
+[7m Done 2021-08-02 22:55:10 [ 291s] -->> 142.251.12.147:443 (www.google.com) <<--[m
+
+------------------------------------------------------------------------------------------------------------------------------------
+[7m Start 2021-08-02 22:55:10        -->> 142.251.12.104:443 (www.google.com) <<--[m
+
+ Further IP addresses:   142.251.12.103 142.251.12.106 142.251.12.105 142.251.12.99 142.251.12.147 2404:6800:4003:c01::69 2404:6800:4003:c01::93 2404:6800:4003:c01::6a 2404:6800:4003:c01::68 
+ rDNS (142.251.12.104):  --
+ Service detected:       HTTP
+
+
+[1m[4m Testing protocols [m[4mvia sockets except NPN+ALPN [m
+
+[1m SSLv2      [m[1;32mnot offered (OK)[m
+[1m SSLv3      [m[1;32mnot offered (OK)[m
+[1m TLS 1      [m[1;33moffered[m (deprecated)
+[1m TLS 1.1    [m[1;33moffered[m (deprecated)
+[1m TLS 1.2    [m[1;32moffered (OK)[m
+[1m TLS 1.3    [m[1;32moffered (OK)[m: final
+[1m NPN/SPDY   [mnot offered
+[1m ALPN/HTTP2 [m[0;32mh2[m, http/1.1, grpc-exp (offered)
+
+[1m[4m Testing cipher categories [m
+
+[1m NULL ciphers (no encryption)                  [m[1;32mnot offered (OK)[m
+[1m Anonymous NULL Ciphers (no authentication)    [m[1;32mnot offered (OK)[m
+[1m Export ciphers (w/o ADH+NULL)                 [m[1;32mnot offered (OK)[m
+[1m LOW: 64 Bit + DES, RC[2,4] (w/o export)       [m[0;32mnot offered (OK)[m
+[1m Triple DES Ciphers / IDEA                     [m[0;33moffered[m
+[1m Obsolete: SEED + 128+256 Bit CBC cipher       [m[1;33moffered[m
+[1m Strong encryption (AEAD ciphers)              [m[1;32moffered (OK)[m
+
+
+[1m[4m Testing robust (perfect) forward secrecy[m[4m, (P)FS -- omitting Null Authentication/Encryption, 3DES, RC4 [m
+
+[0;32m PFS is offered (OK)[m          TLS_AES_256_GCM_SHA384 TLS_CHACHA20_POLY1305_SHA256 ECDHE-RSA-AES256-GCM-SHA384 ECDHE-ECDSA-AES256-GCM-SHA384 ECDHE-RSA-AES256-SHA ECDHE-ECDSA-AES256-SHA
+                              ECDHE-ECDSA-CHACHA20-POLY1305 ECDHE-RSA-CHACHA20-POLY1305 TLS_AES_128_GCM_SHA256 ECDHE-RSA-AES128-GCM-SHA256 ECDHE-ECDSA-AES128-GCM-SHA256 ECDHE-RSA-AES128-SHA
+                              ECDHE-ECDSA-AES128-SHA 
+[1m Elliptic curves offered:     [m[0;32mprime256v1[m [0;32mX25519[m 
+
+
+[1m[4m Testing server preferences [m
+
+[1m Has server cipher order?     [m[0;32myes (OK)[m -- only for < TLS 1.3
+[1m Negotiated protocol          [m[1;32mTLSv1.3[m
+[1m Negotiated cipher            [m[1;32mTLS_AES_256_GCM_SHA384[m, [0;32m253 bit ECDH (X25519)[m
+[1m Cipher order[m
+    TLSv1:     ECDHE-ECDSA-AES128-SHA ECDHE-ECDSA-AES256-SHA ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-SHA AES128-SHA AES256-SHA DES-CBC3-SHA 
+    TLSv1.1:   ECDHE-ECDSA-AES128-SHA ECDHE-ECDSA-AES256-SHA ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-SHA AES128-SHA AES256-SHA DES-CBC3-SHA 
+    TLSv1.2:   ECDHE-ECDSA-CHACHA20-POLY1305 ECDHE-ECDSA-AES128-GCM-SHA256 ECDHE-ECDSA-AES256-GCM-SHA384 ECDHE-ECDSA-AES128-SHA ECDHE-ECDSA-AES256-SHA ECDHE-RSA-CHACHA20-POLY1305
+               ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-SHA AES128-GCM-SHA256 AES256-GCM-SHA384 AES128-SHA AES256-SHA DES-CBC3-SHA 
+
+
+[1m[4m Testing server defaults (Server Hello) [m
+
+[1m TLS extensions (standard)    [m"renegotiation info/#65281" "EC point formats/#11" "next protocol/#13172" "key share/#51" "supported versions/#43" "extended master secret/#23"
+                              "application layer protocol negotiation/#16"
+[1m Session Ticket RFC 5077 hint [mno -- no lifetime advertised
+[1m SSL Session ID support       [myes
+[1m Session Resumption           [mTickets no, ID: yes
+[1m TLS clock skew[m               -1 sec from localtime
+
+  [1m[4mServer Certificate #1[m
+  [1m Signature Algorithm          [m[0;32mSHA256 with RSA[m
+  [1m Server key size              [mRSA 2048 bits
+  [1m Server key usage             [mDigital Signature, Key Encipherment
+  [1m Server extended key usage    [mTLS Web Server Authentication
+  [1m Serial / Fingerprints        [mACD73447EE5167780300000000CC58E6 / SHA1 93C5EF1413D058704F4F3C5BE8A57FFC782966C7
+                                SHA256 FFCF8D78FDE7D15721025974632B74254A88A89C6170344698E29EE7F1FE1EB0
+  [1m Common Name (CN)             [m[3mwww.google.com [m
+  [1m subjectAltName (SAN)         [m[3mwww.google.com [m
+  [1m Issuer                       [m[3mGTS CA 1O1[m ([3mGoogle Trust Services[m from [3mUS[m)
+  [1m Trust (hostname)             [m[0;32mOk via SAN[m (same w/o SNI)
+  [1m Chain of trust[m               [0;32mOk   [m[0;35m[m
+  [1m EV cert[m (experimental)       no 
+  [1m ETS/"eTLS"[m, visibility info  not present
+  [1m Certificate Validity (UTC)   [m[0;33mexpires < 60 days (48)[m (2021-06-28 09:42 --> 2021-09-20 09:42)
+  [1m # of certificates provided[m   2
+  [1m Certificate Revocation List  [mhttp://crl.pki.goog/GTS1O1core.crl
+  [1m OCSP URI                     [mhttp://ocsp.pki.goog/gts1o1core
+  [1m OCSP stapling                [m[1;33mnot offered[m
+  [1m OCSP must staple extension   [m--
+  [1m DNS CAA RR[m (experimental)    [0;32mavailable[m - please check for match with "Issuer" above: [3missue=pki.goog[m
+  [1m Certificate Transparency     [m[0;32myes[m (certificate extension)
+
+  [1m[4mServer Certificate #2[m
+  [1m Signature Algorithm          [m[0;32mSHA256 with RSA[m
+  [1m Server key size              [mEC [0;32m256[m bits
+  [1m Server key usage             [mDigital Signature
+  [1m Server extended key usage    [mTLS Web Server Authentication
+  [1m Serial / Fingerprints        [m4E5A45D05E6C7C6F0300000000CC58E7 / SHA1 9F0E422D88E47BDF0866471663480284A489DE8E
+                                SHA256 58CB2EC05207C490C688A7464BF245EDA35F248D50DC25A12BB65655A2FC9F8E
+  [1m Common Name (CN)             [m[3mwww.google.com [m
+  [1m subjectAltName (SAN)         [m[3mwww.google.com [m
+  [1m Issuer                       [m[3mGTS CA 1O1[m ([3mGoogle Trust Services[m from [3mUS[m)
+  [1m Trust (hostname)             [m[0;32mOk via SAN[m (same w/o SNI)
+  [1m Chain of trust[m               [0;32mOk   [m[0;35m[m
+  [1m EV cert[m (experimental)       no 
+  [1m ETS/"eTLS"[m, visibility info  not present
+  [1m Certificate Validity (UTC)   [m[0;33mexpires < 60 days (48)[m (2021-06-28 09:42 --> 2021-09-20 09:42)
+  [1m # of certificates provided[m   2
+  [1m Certificate Revocation List  [mhttp://crl.pki.goog/GTS1O1core.crl
+  [1m OCSP URI                     [mhttp://ocsp.pki.goog/gts1o1core
+  [1m OCSP stapling                [m[1;33mnot offered[m
+  [1m OCSP must staple extension   [m--
+  [1m DNS CAA RR[m (experimental)    [0;32mavailable[m - please check for match with "Issuer" above: [3missue=pki.goog[m
+  [1m Certificate Transparency     [m[0;32myes[m (certificate extension)
+
+
+[1m[4m Testing HTTP header response @ "/" [m
+
+[1m HTTP Status Code           [m  200 OK
+[1m HTTP clock skew              [m0 sec from localtime
+[1m Strict Transport Security    [m[1;33mnot offered[m
+[1m Public Key Pinning           [m--
+[1m Server banner                [mgws
+[1m Application banner           [m--
+[1m Cookie(s)                    [m2 issued: [0;32m1/2[m secure, [0;32m1/2[m HttpOnly
+[1m Security headers             [m[0;32mX-Frame-Options[m SAMEORIGIN
+                              [0;32mX-XSS-Protection[m 0
+                              [0;36mCache-Control[m private, max-age=0
+[1m Reverse Proxy banner         [m--
+
+
+[1m[4m Testing vulnerabilities [m
+
+[1m Heartbleed[m (CVE-2014-0160)                [1;32mnot vulnerable (OK)[m, no heartbeat extension
+[1m CCS[m (CVE-2014-0224)                       [1;32mnot vulnerable (OK)[m
+[1m Ticketbleed[m (CVE-2016-9244), experiment.  [1;32mnot vulnerable (OK)[m, no session ticket extension
+[1m ROBOT                                     [m[1;32mnot vulnerable (OK)[m
+[1m Secure Renegotiation (RFC 5746)           [m[1;32msupported (OK)[m
+[1m Secure Client-Initiated Renegotiation     [m[0;32mnot vulnerable (OK)[m
+[1m CRIME, TLS [m(CVE-2012-4929)                [0;32mnot vulnerable (OK)[m
+[1m BREACH[m (CVE-2013-3587)                    [0;31mpotentially NOT ok, uses gzip HTTP compression.[m - only supplied "/" tested
+                                           Can be ignored for static pages or if no secrets in the page
+[1m POODLE, SSL[m (CVE-2014-3566)               [1;32mnot vulnerable (OK)[m, no SSLv3 support
+[1m TLS_FALLBACK_SCSV[m (RFC 7507)              [0;35mCheck failed, unexpected result [m, run testssl -Z --debug=1 and look at /tmp/testssl.FvKM9u/*tls_fallback_scsv.txt
+[1m SWEET32[m (CVE-2016-2183, CVE-2016-6329)    [1;33mVULNERABLE[m, uses 64 bit block ciphers
+[1m FREAK[m (CVE-2015-0204)                     [1;32mnot vulnerable (OK)[m
+[1m DROWN[m (CVE-2016-0800, CVE-2016-0703)      [1;32mnot vulnerable on this host and port (OK)[m
+                                           make sure you don't use this certificate elsewhere with SSLv2 enabled services
+                                           https://censys.io/ipv4?q=FFCF8D78FDE7D15721025974632B74254A88A89C6170344698E29EE7F1FE1EB0 could help you to find out
+[1m LOGJAM[m (CVE-2015-4000), experimental      [0;32mnot vulnerable (OK):[m no DH EXPORT ciphers, no DH key detected with <= TLS 1.2
+[1m BEAST[m (CVE-2011-3389)                     TLS1: [1;33mECDHE-ECDSA-AES128-SHA ECDHE-ECDSA-AES256-SHA ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-SHA AES128-SHA AES256-SHA DES-CBC3-SHA [m
+                                           [1;33mVULNERABLE[m -- but also supports higher protocols  TLSv1.1 TLSv1.2 (likely mitigated)
+[1m LUCKY13[m (CVE-2013-0169), experimental     potentially [1;33mVULNERABLE[m, uses cipher block chaining (CBC) ciphers with TLS. Check patches
+[1m RC4[m (CVE-2013-2566, CVE-2015-2808)        [0;32mno RC4 ciphers detected (OK)[m
+
+
+[1m[4m Testing 370 ciphers via OpenSSL plus sockets against the server, ordered by encryption strength [m
+
+Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Cipher Suite Name (IANA/RFC)
+-----------------------------------------------------------------------------------------------------------------------------
+ x1302   TLS_AES_256_GCM_SHA384            ECDH[0;32m 253[m   AESGCM      256      TLS_AES_256_GCM_SHA384                             
+ x1303   TLS_CHACHA20_POLY1305_SHA256      ECDH[0;32m 253[m   ChaCha20    256      TLS_CHACHA20_POLY1305_SHA256                       
+ xc030   ECDHE-RSA-AES256-GCM-SHA384       ECDH[0;32m 253[m   AESGCM      256      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384              
+ xc02c   ECDHE-ECDSA-AES256-GCM-SHA384     ECDH[0;32m 253[m   AESGCM      256      TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384            
+ xc014   ECDHE-RSA-AES256-SHA              ECDH[0;32m 253[m   AES         256      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA                 
+ xc00a   ECDHE-ECDSA-AES256-SHA            ECDH[0;32m 253[m   AES         256      TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA               
+ xcca9   ECDHE-ECDSA-CHACHA20-POLY1305     ECDH[0;32m 253[m   ChaCha20    256      TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256      
+ xcca8   ECDHE-RSA-CHACHA20-POLY1305       ECDH[0;32m 253[m   ChaCha20    256      TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256        
+ x9d     AES256-GCM-SHA384                 RSA        AESGCM      256      TLS_RSA_WITH_AES_256_GCM_SHA384                    
+ x35     AES256-SHA                        RSA        AES         256      TLS_RSA_WITH_AES_256_CBC_SHA                       
+ x1301   TLS_AES_128_GCM_SHA256            ECDH[0;32m 253[m   AESGCM      128      TLS_AES_128_GCM_SHA256                             
+ xc02f   ECDHE-RSA-AES128-GCM-SHA256       ECDH[0;32m 253[m   AESGCM      128      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256              
+ xc02b   ECDHE-ECDSA-AES128-GCM-SHA256     ECDH[0;32m 253[m   AESGCM      128      TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256            
+ xc013   ECDHE-RSA-AES128-SHA              ECDH[0;32m 253[m   AES         128      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA                 
+ xc009   ECDHE-ECDSA-AES128-SHA            ECDH[0;32m 253[m   AES         128      TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA               
+ x9c     AES128-GCM-SHA256                 RSA        AESGCM      128      TLS_RSA_WITH_AES_128_GCM_SHA256                    
+ x2f     AES128-SHA                        RSA        AES         128      TLS_RSA_WITH_AES_128_CBC_SHA                       
+ x0a     DES-CBC3-SHA                      RSA        3DES        168      TLS_RSA_WITH_3DES_EDE_CBC_SHA                      
+
+
+[1m[4m Running client simulations [m[1m[4m(HTTP) [m[1m[4mvia sockets [m
+
+ Android 4.4.2                TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Android 5.0.0                TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Android 6.0                  TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Android 7.0                  TLSv1.2 ECDHE-ECDSA-CHACHA20-POLY1305, [0;32m253 bit ECDH (X25519)[m
+ Android 8.1 (native)         TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m253 bit ECDH (X25519)[m
+ Android 9.0 (native)         TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Android 10.0 (native)        TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Chrome 74 (Win 10)           TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Chrome 79 (Win 10)           TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Firefox 66 (Win 8.1/10)      TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Firefox 71 (Win 10)          TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ IE 6 XP                      No connection
+ IE 8 Win 7                   TLSv1.0 ECDHE-ECDSA-AES128-SHA, [0;32m256 bit ECDH (P-256)[m
+ IE 8 XP                      TLSv1.0 DES-CBC3-SHA, No FS
+ IE 11 Win 7                  TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ IE 11 Win 8.1                TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ IE 11 Win Phone 8.1          TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ IE 11 Win 10                 TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Edge 15 Win 10               TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m253 bit ECDH (X25519)[m
+ Edge 17 (Win 10)             TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m253 bit ECDH (X25519)[m
+ Opera 66 (Win 10)            TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Safari 9 iOS 9               TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Safari 9 OS X 10.11          TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Safari 10 OS X 10.12         TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Safari 12.1 (iOS 12.2)       TLSv1.3 TLS_CHACHA20_POLY1305_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Safari 13.0 (macOS 10.14.6)  TLSv1.3 TLS_CHACHA20_POLY1305_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Apple ATS 9 iOS 9            TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Java 6u45                    TLSv1.0 AES128-SHA, No FS
+ Java 7u25                    TLSv1.0 ECDHE-ECDSA-AES128-SHA, [0;32m256 bit ECDH (P-256)[m
+ Java 8u161                   TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Java 11.0.2 (OpenJDK)        TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Java 12.0.1 (OpenJDK)        TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m256 bit ECDH (P-256)[m
+ OpenSSL 1.0.2e               TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ OpenSSL 1.1.0l (Debian)      TLSv1.2 ECDHE-ECDSA-CHACHA20-POLY1305, [0;32m253 bit ECDH (X25519)[m
+ OpenSSL 1.1.1d (Debian)      TLSv1.3 TLS_AES_256_GCM_SHA384, [0;32m253 bit ECDH (X25519)[m
+ Thunderbird (68.3)           TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+
+[7m Done 2021-08-02 23:04:41 [ 863s] -->> 142.251.12.104:443 (www.google.com) <<--[m
+
+------------------------------------------------------------------------------------------------------------------------------------
+[7m Start 2021-08-02 23:04:42        -->> 142.251.12.99:443 (www.google.com) <<--[m
+
+ Further IP addresses:   142.251.12.103 142.251.12.106 142.251.12.105 142.251.12.104 142.251.12.147 2404:6800:4003:c01::69 2404:6800:4003:c01::93 2404:6800:4003:c01::6a 2404:6800:4003:c01::68 
+ rDNS (142.251.12.99):   --
+ Service detected:       HTTP
+
+
+[1m[4m Testing protocols [m[4mvia sockets except NPN+ALPN [m
+
+[1m SSLv2      [m[1;32mnot offered (OK)[m
+[1m SSLv3      [m[1;32mnot offered (OK)[m
+[1m TLS 1      [m[1;33moffered[m (deprecated)
+[1m TLS 1.1    [m[1;33moffered[m (deprecated)
+[1m TLS 1.2    [m[1;32moffered (OK)[m
+[1m TLS 1.3    [m[1;32moffered (OK)[m: final
+[1m NPN/SPDY   [mnot offered
+[1m ALPN/HTTP2 [m[0;32mh2[m, http/1.1, grpc-exp (offered)
+
+[1m[4m Testing cipher categories [m
+
+[1m NULL ciphers (no encryption)                  [m[1;32mnot offered (OK)[m
+[1m Anonymous NULL Ciphers (no authentication)    [m[1;32mnot offered (OK)[m
+[1m Export ciphers (w/o ADH+NULL)                 [m[1;32mnot offered (OK)[m
+[1m LOW: 64 Bit + DES, RC[2,4] (w/o export)       [m[0;32mnot offered (OK)[m
+[1m Triple DES Ciphers / IDEA                     [m[0;33moffered[m
+[1m Obsolete: SEED + 128+256 Bit CBC cipher       [m[1;33moffered[m
+[1m Strong encryption (AEAD ciphers)              [m[1;32moffered (OK)[m
+
+
+[1m[4m Testing robust (perfect) forward secrecy[m[4m, (P)FS -- omitting Null Authentication/Encryption, 3DES, RC4 [m
+
+[0;32m PFS is offered (OK)[m          TLS_AES_256_GCM_SHA384 TLS_CHACHA20_POLY1305_SHA256 ECDHE-RSA-AES256-GCM-SHA384 ECDHE-ECDSA-AES256-GCM-SHA384 ECDHE-RSA-AES256-SHA ECDHE-ECDSA-AES256-SHA
+                              ECDHE-ECDSA-CHACHA20-POLY1305 ECDHE-RSA-CHACHA20-POLY1305 TLS_AES_128_GCM_SHA256 ECDHE-RSA-AES128-GCM-SHA256 ECDHE-ECDSA-AES128-GCM-SHA256 ECDHE-RSA-AES128-SHA
+                              ECDHE-ECDSA-AES128-SHA 
+[1m Elliptic curves offered:     [m[0;32mprime256v1[m [0;32mX25519[m 
+
+
+[1m[4m Testing server preferences [m
+
+[1m Has server cipher order?     [m[0;32myes (OK)[m -- only for < TLS 1.3
+[1m Negotiated protocol          [m[1;32mTLSv1.3[m
+[1m Negotiated cipher            [m[1;32mTLS_AES_256_GCM_SHA384[m, [0;32m253 bit ECDH (X25519)[m
+[1m Cipher order[m
+    TLSv1:     ECDHE-ECDSA-AES128-SHA ECDHE-ECDSA-AES256-SHA ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-SHA AES128-SHA AES256-SHA DES-CBC3-SHA 
+    TLSv1.1:   ECDHE-ECDSA-AES128-SHA ECDHE-ECDSA-AES256-SHA ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-SHA AES128-SHA AES256-SHA DES-CBC3-SHA 
+    TLSv1.2:   ECDHE-ECDSA-CHACHA20-POLY1305 ECDHE-ECDSA-AES128-GCM-SHA256 ECDHE-ECDSA-AES256-GCM-SHA384 ECDHE-ECDSA-AES128-SHA ECDHE-ECDSA-AES256-SHA ECDHE-RSA-CHACHA20-POLY1305
+               ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-SHA AES128-GCM-SHA256 AES256-GCM-SHA384 AES128-SHA AES256-SHA DES-CBC3-SHA 
+
+
+[1m[4m Testing server defaults (Server Hello) [m
+
+[1m TLS extensions (standard)    [m"renegotiation info/#65281" "EC point formats/#11" "next protocol/#13172" "key share/#51" "supported versions/#43" "extended master secret/#23"
+                              "application layer protocol negotiation/#16"
+[1m Session Ticket RFC 5077 hint [mno -- no lifetime advertised
+[1m SSL Session ID support       [myes
+[1m Session Resumption           [mTickets no, ID: yes
+[1m TLS clock skew[m               0 sec from localtime
+
+  [1m[4mServer Certificate #1[m
+  [1m Signature Algorithm          [m[0;32mSHA256 with RSA[m
+  [1m Server key size              [mRSA 2048 bits
+  [1m Server key usage             [mDigital Signature, Key Encipherment
+  [1m Server extended key usage    [mTLS Web Server Authentication
+  [1m Serial / Fingerprints        [mACD73447EE5167780300000000CC58E6 / SHA1 93C5EF1413D058704F4F3C5BE8A57FFC782966C7
+                                SHA256 FFCF8D78FDE7D15721025974632B74254A88A89C6170344698E29EE7F1FE1EB0
+  [1m Common Name (CN)             [m[3mwww.google.com [m
+  [1m subjectAltName (SAN)         [m[3mwww.google.com [m
+  [1m Issuer                       [m[3mGTS CA 1O1[m ([3mGoogle Trust Services[m from [3mUS[m)
+  [1m Trust (hostname)             [m[0;32mOk via SAN[m (same w/o SNI)
+  [1m Chain of trust[m               [0;32mOk   [m[0;35m[m
+  [1m EV cert[m (experimental)       no 
+  [1m ETS/"eTLS"[m, visibility info  not present
+  [1m Certificate Validity (UTC)   [m[0;33mexpires < 60 days (48)[m (2021-06-28 09:42 --> 2021-09-20 09:42)
+  [1m # of certificates provided[m   2
+  [1m Certificate Revocation List  [mhttp://crl.pki.goog/GTS1O1core.crl
+  [1m OCSP URI                     [mhttp://ocsp.pki.goog/gts1o1core
+  [1m OCSP stapling                [m[1;33mnot offered[m
+  [1m OCSP must staple extension   [m--
+  [1m DNS CAA RR[m (experimental)    [0;32mavailable[m - please check for match with "Issuer" above: [3missue=pki.goog[m
+  [1m Certificate Transparency     [m[0;32myes[m (certificate extension)
+
+  [1m[4mServer Certificate #2[m
+  [1m Signature Algorithm          [m[0;32mSHA256 with RSA[m
+  [1m Server key size              [mEC [0;32m256[m bits
+  [1m Server key usage             [mDigital Signature
+  [1m Server extended key usage    [mTLS Web Server Authentication
+  [1m Serial / Fingerprints        [m4E5A45D05E6C7C6F0300000000CC58E7 / SHA1 9F0E422D88E47BDF0866471663480284A489DE8E
+                                SHA256 58CB2EC05207C490C688A7464BF245EDA35F248D50DC25A12BB65655A2FC9F8E
+  [1m Common Name (CN)             [m[3mwww.google.com [m
+  [1m subjectAltName (SAN)         [m[3mwww.google.com [m
+  [1m Issuer                       [m[3mGTS CA 1O1[m ([3mGoogle Trust Services[m from [3mUS[m)
+  [1m Trust (hostname)             [m[0;32mOk via SAN[m (same w/o SNI)
+  [1m Chain of trust[m               [0;32mOk   [m[0;35m[m
+  [1m EV cert[m (experimental)       no 
+  [1m ETS/"eTLS"[m, visibility info  not present
+  [1m Certificate Validity (UTC)   [m[0;33mexpires < 60 days (48)[m (2021-06-28 09:42 --> 2021-09-20 09:42)
+  [1m # of certificates provided[m   2
+  [1m Certificate Revocation List  [mhttp://crl.pki.goog/GTS1O1core.crl
+  [1m OCSP URI                     [mhttp://ocsp.pki.goog/gts1o1core
+  [1m OCSP stapling                [m[1;33mnot offered[m
+  [1m OCSP must staple extension   [m--
+  [1m DNS CAA RR[m (experimental)    [0;32mavailable[m - please check for match with "Issuer" above: [3missue=pki.goog[m
+  [1m Certificate Transparency     [m[0;32myes[m (certificate extension)
+
+
+[1m[4m Testing HTTP header response @ "/" [m
+
+[1m HTTP Status Code           [m  200 OK
+[1m HTTP clock skew              [m0 sec from localtime
+[1m Strict Transport Security    [m[1;33mnot offered[m
+[1m Public Key Pinning           [m--
+[1m Server banner                [mgws
+[1m Application banner           [m--
+[1m Cookie(s)                    [m2 issued: [0;32m1/2[m secure, [0;32m1/2[m HttpOnly
+[1m Security headers             [m[0;32mX-Frame-Options[m SAMEORIGIN
+                              [0;32mX-XSS-Protection[m 0
+                              [0;36mCache-Control[m private, max-age=0
+[1m Reverse Proxy banner         [m--
+
+
+[1m[4m Testing vulnerabilities [m
+
+[1m Heartbleed[m (CVE-2014-0160)                [1;32mnot vulnerable (OK)[m, no heartbeat extension
+[1m CCS[m (CVE-2014-0224)                       [1;32mnot vulnerable (OK)[m
+[1m Ticketbleed[m (CVE-2016-9244), experiment.  [1;32mnot vulnerable (OK)[m, no session ticket extension
+[1m ROBOT                                     [m[1;32mnot vulnerable (OK)[m
+[1m Secure Renegotiation (RFC 5746)           [m[1;32msupported (OK)[m
+[1m Secure Client-Initiated Renegotiation     [m[0;32mnot vulnerable (OK)[m
+[1m CRIME, TLS [m(CVE-2012-4929)                [0;32mnot vulnerable (OK)[m
+[1m BREACH[m (CVE-2013-3587)                    [0;31mpotentially NOT ok, uses gzip HTTP compression.[m - only supplied "/" tested
+                                           Can be ignored for static pages or if no secrets in the page
+[1m POODLE, SSL[m (CVE-2014-3566)               [1;32mnot vulnerable (OK)[m, no SSLv3 support
+[1m TLS_FALLBACK_SCSV[m (RFC 7507)              [0;35mCheck failed, unexpected result [m, run testssl -Z --debug=1 and look at /tmp/testssl.FvKM9u/*tls_fallback_scsv.txt
+[1m SWEET32[m (CVE-2016-2183, CVE-2016-6329)    [1;33mVULNERABLE[m, uses 64 bit block ciphers
+[1m FREAK[m (CVE-2015-0204)                     [1;32mnot vulnerable (OK)[m
+[1m DROWN[m (CVE-2016-0800, CVE-2016-0703)      [1;32mnot vulnerable on this host and port (OK)[m
+                                           make sure you don't use this certificate elsewhere with SSLv2 enabled services
+                                           https://censys.io/ipv4?q=FFCF8D78FDE7D15721025974632B74254A88A89C6170344698E29EE7F1FE1EB0 could help you to find out
+[1m LOGJAM[m (CVE-2015-4000), experimental      [0;32mnot vulnerable (OK):[m no DH EXPORT ciphers, no DH key detected with <= TLS 1.2
+[1m BEAST[m (CVE-2011-3389)                     TLS1: [1;33mECDHE-ECDSA-AES128-SHA ECDHE-ECDSA-AES256-SHA ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-SHA AES128-SHA AES256-SHA DES-CBC3-SHA [m
+                                           [1;33mVULNERABLE[m -- but also supports higher protocols  TLSv1.1 TLSv1.2 (likely mitigated)
+[1m LUCKY13[m (CVE-2013-0169), experimental     potentially [1;33mVULNERABLE[m, uses cipher block chaining (CBC) ciphers with TLS. Check patches
+[1m RC4[m (CVE-2013-2566, CVE-2015-2808)        [0;32mno RC4 ciphers detected (OK)[m
+
+
+[1m[4m Testing 370 ciphers via OpenSSL plus sockets against the server, ordered by encryption strength [m
+
+Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Cipher Suite Name (IANA/RFC)
+-----------------------------------------------------------------------------------------------------------------------------
+ x1302   TLS_AES_256_GCM_SHA384            ECDH[0;32m 253[m   AESGCM      256      TLS_AES_256_GCM_SHA384                             
+ x1303   TLS_CHACHA20_POLY1305_SHA256      ECDH[0;32m 253[m   ChaCha20    256      TLS_CHACHA20_POLY1305_SHA256                       
+ xc030   ECDHE-RSA-AES256-GCM-SHA384       ECDH[0;32m 253[m   AESGCM      256      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384              
+ xc02c   ECDHE-ECDSA-AES256-GCM-SHA384     ECDH[0;32m 253[m   AESGCM      256      TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384            
+ xc014   ECDHE-RSA-AES256-SHA              ECDH[0;32m 253[m   AES         256      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA                 
+ xc00a   ECDHE-ECDSA-AES256-SHA            ECDH[0;32m 253[m   AES         256      TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA               
+ xcca9   ECDHE-ECDSA-CHACHA20-POLY1305     ECDH[0;32m 253[m   ChaCha20    256      TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256      
+ xcca8   ECDHE-RSA-CHACHA20-POLY1305       ECDH[0;32m 253[m   ChaCha20    256      TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256        
+ x9d     AES256-GCM-SHA384                 RSA        AESGCM      256      TLS_RSA_WITH_AES_256_GCM_SHA384                    
+ x35     AES256-SHA                        RSA        AES         256      TLS_RSA_WITH_AES_256_CBC_SHA                       
+ x1301   TLS_AES_128_GCM_SHA256            ECDH[0;32m 253[m   AESGCM      128      TLS_AES_128_GCM_SHA256                             
+ xc02f   ECDHE-RSA-AES128-GCM-SHA256       ECDH[0;32m 253[m   AESGCM      128      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256              
+ xc02b   ECDHE-ECDSA-AES128-GCM-SHA256     ECDH[0;32m 253[m   AESGCM      128      TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256            
+ xc013   ECDHE-RSA-AES128-SHA              ECDH[0;32m 253[m   AES         128      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA                 
+ xc009   ECDHE-ECDSA-AES128-SHA            ECDH[0;32m 253[m   AES         128      TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA               
+ x9c     AES128-GCM-SHA256                 RSA        AESGCM      128      TLS_RSA_WITH_AES_128_GCM_SHA256                    
+ x2f     AES128-SHA                        RSA        AES         128      TLS_RSA_WITH_AES_128_CBC_SHA                       
+ x0a     DES-CBC3-SHA                      RSA        3DES        168      TLS_RSA_WITH_3DES_EDE_CBC_SHA                      
+
+
+[1m[4m Running client simulations [m[1m[4m(HTTP) [m[1m[4mvia sockets [m
+
+ Android 4.4.2                TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Android 5.0.0                TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Android 6.0                  TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Android 7.0                  TLSv1.2 ECDHE-ECDSA-CHACHA20-POLY1305, [0;32m253 bit ECDH (X25519)[m
+ Android 8.1 (native)         TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m253 bit ECDH (X25519)[m
+ Android 9.0 (native)         TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Android 10.0 (native)        TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Chrome 74 (Win 10)           TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Chrome 79 (Win 10)           TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Firefox 66 (Win 8.1/10)      TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Firefox 71 (Win 10)          TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ IE 6 XP                      No connection
+ IE 8 Win 7                   TLSv1.0 ECDHE-ECDSA-AES128-SHA, [0;32m256 bit ECDH (P-256)[m
+ IE 8 XP                      TLSv1.0 DES-CBC3-SHA, No FS
+ IE 11 Win 7                  TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ IE 11 Win 8.1                TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ IE 11 Win Phone 8.1          TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ IE 11 Win 10                 TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Edge 15 Win 10               TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m253 bit ECDH (X25519)[m
+ Edge 17 (Win 10)             TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m253 bit ECDH (X25519)[m
+ Opera 66 (Win 10)            TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Safari 9 iOS 9               TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Safari 9 OS X 10.11          TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Safari 10 OS X 10.12         TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Safari 12.1 (iOS 12.2)       TLSv1.3 TLS_CHACHA20_POLY1305_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Safari 13.0 (macOS 10.14.6)  TLSv1.3 TLS_CHACHA20_POLY1305_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Apple ATS 9 iOS 9            TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Java 6u45                    TLSv1.0 AES128-SHA, No FS
+ Java 7u25                    TLSv1.0 ECDHE-ECDSA-AES128-SHA, [0;32m256 bit ECDH (P-256)[m
+ Java 8u161                   TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Java 11.0.2 (OpenJDK)        TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Java 12.0.1 (OpenJDK)        TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m256 bit ECDH (P-256)[m
+ OpenSSL 1.0.2e               TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ OpenSSL 1.1.0l (Debian)      TLSv1.2 ECDHE-ECDSA-CHACHA20-POLY1305, [0;32m253 bit ECDH (X25519)[m
+ OpenSSL 1.1.1d (Debian)      TLSv1.3 TLS_AES_256_GCM_SHA384, [0;32m253 bit ECDH (X25519)[m
+ Thunderbird (68.3)           TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+
+[7m Done 2021-08-02 23:15:11 [1493s] -->> 142.251.12.99:443 (www.google.com) <<--[m
+
+------------------------------------------------------------------------------------------------------------------------------------
+[7m Start 2021-08-02 23:15:12        -->> 142.251.12.105:443 (www.google.com) <<--[m
+
+ Further IP addresses:   142.251.12.103 142.251.12.106 142.251.12.99 142.251.12.104 142.251.12.147 2404:6800:4003:c01::69 2404:6800:4003:c01::93 2404:6800:4003:c01::6a 2404:6800:4003:c01::68 
+ rDNS (142.251.12.105):  --
+ Service detected:       HTTP
+
+
+[1m[4m Testing protocols [m[4mvia sockets except NPN+ALPN [m
+
+[1m SSLv2      [m[1;32mnot offered (OK)[m
+[1m SSLv3      [m[1;32mnot offered (OK)[m
+[1m TLS 1      [m[1;33moffered[m (deprecated)
+[1m TLS 1.1    [m[1;33moffered[m (deprecated)
+[1m TLS 1.2    [m[1;32moffered (OK)[m
+[1m TLS 1.3    [m[1;32moffered (OK)[m: final
+[1m NPN/SPDY   [mnot offered
+[1m ALPN/HTTP2 [m[0;32mh2[m, http/1.1, grpc-exp (offered)
+
+[1m[4m Testing cipher categories [m
+
+[1m NULL ciphers (no encryption)                  [m[1;32mnot offered (OK)[m
+[1m Anonymous NULL Ciphers (no authentication)    [m[1;32mnot offered (OK)[m
+[1m Export ciphers (w/o ADH+NULL)                 [m[1;32mnot offered (OK)[m
+[1m LOW: 64 Bit + DES, RC[2,4] (w/o export)       [m[0;32mnot offered (OK)[m
+[1m Triple DES Ciphers / IDEA                     [m[0;33moffered[m
+[1m Obsolete: SEED + 128+256 Bit CBC cipher       [m[1;33moffered[m
+[1m Strong encryption (AEAD ciphers)              [m[1;32moffered (OK)[m
+
+
+[1m[4m Testing robust (perfect) forward secrecy[m[4m, (P)FS -- omitting Null Authentication/Encryption, 3DES, RC4 [m
+
+[0;32m PFS is offered (OK)[m          TLS_AES_256_GCM_SHA384 TLS_CHACHA20_POLY1305_SHA256 ECDHE-RSA-AES256-GCM-SHA384 ECDHE-ECDSA-AES256-GCM-SHA384 ECDHE-RSA-AES256-SHA ECDHE-ECDSA-AES256-SHA
+                              ECDHE-ECDSA-CHACHA20-POLY1305 ECDHE-RSA-CHACHA20-POLY1305 TLS_AES_128_GCM_SHA256 ECDHE-RSA-AES128-GCM-SHA256 ECDHE-ECDSA-AES128-GCM-SHA256 ECDHE-RSA-AES128-SHA
+                              ECDHE-ECDSA-AES128-SHA 
+[1m Elliptic curves offered:     [m[0;32mprime256v1[m [0;32mX25519[m 
+
+
+[1m[4m Testing server preferences [m
+
+[1m Has server cipher order?     [m[0;32myes (OK)[m -- only for < TLS 1.3
+[1m Negotiated protocol          [m[1;32mTLSv1.3[m
+[1m Negotiated cipher            [m[1;32mTLS_AES_256_GCM_SHA384[m, [0;32m253 bit ECDH (X25519)[m
+[1m Cipher order[m
+    TLSv1:     ECDHE-ECDSA-AES128-SHA ECDHE-ECDSA-AES256-SHA ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-SHA AES128-SHA AES256-SHA DES-CBC3-SHA 
+    TLSv1.1:   ECDHE-ECDSA-AES128-SHA ECDHE-ECDSA-AES256-SHA ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-SHA AES128-SHA AES256-SHA DES-CBC3-SHA 
+    TLSv1.2:   ECDHE-ECDSA-CHACHA20-POLY1305 ECDHE-ECDSA-AES128-GCM-SHA256 ECDHE-ECDSA-AES256-GCM-SHA384 ECDHE-ECDSA-AES128-SHA ECDHE-ECDSA-AES256-SHA ECDHE-RSA-CHACHA20-POLY1305
+               ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-SHA AES128-GCM-SHA256 AES256-GCM-SHA384 AES128-SHA AES256-SHA DES-CBC3-SHA 
+
+
+[1m[4m Testing server defaults (Server Hello) [m
+
+[1m TLS extensions (standard)    [m"renegotiation info/#65281" "EC point formats/#11" "next protocol/#13172" "key share/#51" "supported versions/#43" "extended master secret/#23"
+                              "application layer protocol negotiation/#16"
+[1m Session Ticket RFC 5077 hint [mno -- no lifetime advertised
+[1m SSL Session ID support       [myes
+[1m Session Resumption           [mTickets no, ID: yes
+[1m TLS clock skew[m               0 sec from localtime
+
+  [1m[4mServer Certificate #1[m
+  [1m Signature Algorithm          [m[0;32mSHA256 with RSA[m
+  [1m Server key size              [mRSA 2048 bits
+  [1m Server key usage             [mDigital Signature, Key Encipherment
+  [1m Server extended key usage    [mTLS Web Server Authentication
+  [1m Serial / Fingerprints        [mACD73447EE5167780300000000CC58E6 / SHA1 93C5EF1413D058704F4F3C5BE8A57FFC782966C7
+                                SHA256 FFCF8D78FDE7D15721025974632B74254A88A89C6170344698E29EE7F1FE1EB0
+  [1m Common Name (CN)             [m[3mwww.google.com [m
+  [1m subjectAltName (SAN)         [m[3mwww.google.com [m
+  [1m Issuer                       [m[3mGTS CA 1O1[m ([3mGoogle Trust Services[m from [3mUS[m)
+  [1m Trust (hostname)             [m[0;32mOk via SAN[m (same w/o SNI)
+  [1m Chain of trust[m               [0;32mOk   [m[0;35m[m
+  [1m EV cert[m (experimental)       no 
+  [1m ETS/"eTLS"[m, visibility info  not present
+  [1m Certificate Validity (UTC)   [m[0;33mexpires < 60 days (48)[m (2021-06-28 09:42 --> 2021-09-20 09:42)
+  [1m # of certificates provided[m   2
+  [1m Certificate Revocation List  [mhttp://crl.pki.goog/GTS1O1core.crl
+  [1m OCSP URI                     [mhttp://ocsp.pki.goog/gts1o1core
+  [1m OCSP stapling                [m[1;33mnot offered[m
+  [1m OCSP must staple extension   [m--
+  [1m DNS CAA RR[m (experimental)    [0;32mavailable[m - please check for match with "Issuer" above: [3missue=pki.goog[m
+  [1m Certificate Transparency     [m[0;32myes[m (certificate extension)
+
+  [1m[4mServer Certificate #2[m
+  [1m Signature Algorithm          [m[0;32mSHA256 with RSA[m
+  [1m Server key size              [mEC [0;32m256[m bits
+  [1m Server key usage             [mDigital Signature
+  [1m Server extended key usage    [mTLS Web Server Authentication
+  [1m Serial / Fingerprints        [m4E5A45D05E6C7C6F0300000000CC58E7 / SHA1 9F0E422D88E47BDF0866471663480284A489DE8E
+                                SHA256 58CB2EC05207C490C688A7464BF245EDA35F248D50DC25A12BB65655A2FC9F8E
+  [1m Common Name (CN)             [m[3mwww.google.com [m
+  [1m subjectAltName (SAN)         [m[3mwww.google.com [m
+  [1m Issuer                       [m[3mGTS CA 1O1[m ([3mGoogle Trust Services[m from [3mUS[m)
+  [1m Trust (hostname)             [m[0;32mOk via SAN[m (same w/o SNI)
+  [1m Chain of trust[m               [0;32mOk   [m[0;35m[m
+  [1m EV cert[m (experimental)       no 
+  [1m ETS/"eTLS"[m, visibility info  not present
+  [1m Certificate Validity (UTC)   [m[0;33mexpires < 60 days (48)[m (2021-06-28 09:42 --> 2021-09-20 09:42)
+  [1m # of certificates provided[m   2
+  [1m Certificate Revocation List  [mhttp://crl.pki.goog/GTS1O1core.crl
+  [1m OCSP URI                     [mhttp://ocsp.pki.goog/gts1o1core
+  [1m OCSP stapling                [m[1;33mnot offered[m
+  [1m OCSP must staple extension   [m--
+  [1m DNS CAA RR[m (experimental)    [0;32mavailable[m - please check for match with "Issuer" above: [3missue=pki.goog[m
+  [1m Certificate Transparency     [m[0;32myes[m (certificate extension)
+
+
+[1m[4m Testing HTTP header response @ "/" [m
+
+[1m HTTP Status Code           [m  200 OK
+[1m HTTP clock skew              [m0 sec from localtime
+[1m Strict Transport Security    [m[1;33mnot offered[m
+[1m Public Key Pinning           [m--
+[1m Server banner                [mgws
+[1m Application banner           [m--
+[1m Cookie(s)                    [m2 issued: [0;32m1/2[m secure, [0;32m1/2[m HttpOnly
+[1m Security headers             [m[0;32mX-Frame-Options[m SAMEORIGIN
+                              [0;32mX-XSS-Protection[m 0
+                              [0;36mCache-Control[m private, max-age=0
+[1m Reverse Proxy banner         [m--
+
+
+[1m[4m Testing vulnerabilities [m
+
+[1m Heartbleed[m (CVE-2014-0160)                [1;32mnot vulnerable (OK)[m, no heartbeat extension
+[1m CCS[m (CVE-2014-0224)                       [1;32mnot vulnerable (OK)[m
+[1m Ticketbleed[m (CVE-2016-9244), experiment.  [1;32mnot vulnerable (OK)[m, no session ticket extension
+[1m ROBOT                                     [m[1;32mnot vulnerable (OK)[m
+[1m Secure Renegotiation (RFC 5746)           [m[1;32msupported (OK)[m
+[1m Secure Client-Initiated Renegotiation     [m[0;32mnot vulnerable (OK)[m
+[1m CRIME, TLS [m(CVE-2012-4929)                [0;32mnot vulnerable (OK)[m
+[1m BREACH[m (CVE-2013-3587)                    [0;31mpotentially NOT ok, uses gzip HTTP compression.[m - only supplied "/" tested
+                                           Can be ignored for static pages or if no secrets in the page
+[1m POODLE, SSL[m (CVE-2014-3566)               [1;32mnot vulnerable (OK)[m, no SSLv3 support
+[1m TLS_FALLBACK_SCSV[m (RFC 7507)              [0;35mCheck failed, unexpected result [m, run testssl -Z --debug=1 and look at /tmp/testssl.FvKM9u/*tls_fallback_scsv.txt
+[1m SWEET32[m (CVE-2016-2183, CVE-2016-6329)    [1;33mVULNERABLE[m, uses 64 bit block ciphers
+[1m FREAK[m (CVE-2015-0204)                     [1;32mnot vulnerable (OK)[m
+[1m DROWN[m (CVE-2016-0800, CVE-2016-0703)      [1;32mnot vulnerable on this host and port (OK)[m
+                                           make sure you don't use this certificate elsewhere with SSLv2 enabled services
+                                           https://censys.io/ipv4?q=FFCF8D78FDE7D15721025974632B74254A88A89C6170344698E29EE7F1FE1EB0 could help you to find out
+[1m LOGJAM[m (CVE-2015-4000), experimental      [0;32mnot vulnerable (OK):[m no DH EXPORT ciphers, no DH key detected with <= TLS 1.2
+[1m BEAST[m (CVE-2011-3389)                     TLS1: [1;33mECDHE-ECDSA-AES128-SHA ECDHE-ECDSA-AES256-SHA ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-SHA AES128-SHA AES256-SHA DES-CBC3-SHA [m
+                                           [1;33mVULNERABLE[m -- but also supports higher protocols  TLSv1.1 TLSv1.2 (likely mitigated)
+[1m LUCKY13[m (CVE-2013-0169), experimental     potentially [1;33mVULNERABLE[m, uses cipher block chaining (CBC) ciphers with TLS. Check patches
+[1m RC4[m (CVE-2013-2566, CVE-2015-2808)        [0;32mno RC4 ciphers detected (OK)[m
+
+
+[1m[4m Testing 370 ciphers via OpenSSL plus sockets against the server, ordered by encryption strength [m
+
+Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Cipher Suite Name (IANA/RFC)
+-----------------------------------------------------------------------------------------------------------------------------
+ x1302   TLS_AES_256_GCM_SHA384            ECDH[0;32m 253[m   AESGCM      256      TLS_AES_256_GCM_SHA384                             
+ x1303   TLS_CHACHA20_POLY1305_SHA256      ECDH[0;32m 253[m   ChaCha20    256      TLS_CHACHA20_POLY1305_SHA256                       
+ xc030   ECDHE-RSA-AES256-GCM-SHA384       ECDH[0;32m 253[m   AESGCM      256      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384              
+ xc02c   ECDHE-ECDSA-AES256-GCM-SHA384     ECDH[0;32m 253[m   AESGCM      256      TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384            
+ xc014   ECDHE-RSA-AES256-SHA              ECDH[0;32m 253[m   AES         256      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA                 
+ xc00a   ECDHE-ECDSA-AES256-SHA            ECDH[0;32m 253[m   AES         256      TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA               
+ xcca9   ECDHE-ECDSA-CHACHA20-POLY1305     ECDH[0;32m 253[m   ChaCha20    256      TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256      
+ xcca8   ECDHE-RSA-CHACHA20-POLY1305       ECDH[0;32m 253[m   ChaCha20    256      TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256        
+ x9d     AES256-GCM-SHA384                 RSA        AESGCM      256      TLS_RSA_WITH_AES_256_GCM_SHA384                    
+ x35     AES256-SHA                        RSA        AES         256      TLS_RSA_WITH_AES_256_CBC_SHA                       
+ x1301   TLS_AES_128_GCM_SHA256            ECDH[0;32m 253[m   AESGCM      128      TLS_AES_128_GCM_SHA256                             
+ xc02f   ECDHE-RSA-AES128-GCM-SHA256       ECDH[0;32m 253[m   AESGCM      128      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256              
+ xc02b   ECDHE-ECDSA-AES128-GCM-SHA256     ECDH[0;32m 253[m   AESGCM      128      TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256            
+ xc013   ECDHE-RSA-AES128-SHA              ECDH[0;32m 253[m   AES         128      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA                 
+ xc009   ECDHE-ECDSA-AES128-SHA            ECDH[0;32m 253[m   AES         128      TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA               
+ x9c     AES128-GCM-SHA256                 RSA        AESGCM      128      TLS_RSA_WITH_AES_128_GCM_SHA256                    
+ x2f     AES128-SHA                        RSA        AES         128      TLS_RSA_WITH_AES_128_CBC_SHA                       
+ x0a     DES-CBC3-SHA                      RSA        3DES        168      TLS_RSA_WITH_3DES_EDE_CBC_SHA                      
+
+
+[1m[4m Running client simulations [m[1m[4m(HTTP) [m[1m[4mvia sockets [m
+
+ Android 4.4.2                TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Android 5.0.0                TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Android 6.0                  TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Android 7.0                  TLSv1.2 ECDHE-ECDSA-CHACHA20-POLY1305, [0;32m253 bit ECDH (X25519)[m
+ Android 8.1 (native)         TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m253 bit ECDH (X25519)[m
+ Android 9.0 (native)         TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Android 10.0 (native)        TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Chrome 74 (Win 10)           TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Chrome 79 (Win 10)           TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Firefox 66 (Win 8.1/10)      TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Firefox 71 (Win 10)          TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ IE 6 XP                      No connection
+ IE 8 Win 7                   TLSv1.0 ECDHE-ECDSA-AES128-SHA, [0;32m256 bit ECDH (P-256)[m
+ IE 8 XP                      TLSv1.0 DES-CBC3-SHA, No FS
+ IE 11 Win 7                  TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ IE 11 Win 8.1                TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ IE 11 Win Phone 8.1          TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ IE 11 Win 10                 TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Edge 15 Win 10               TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m253 bit ECDH (X25519)[m
+ Edge 17 (Win 10)             TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m253 bit ECDH (X25519)[m
+ Opera 66 (Win 10)            TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Safari 9 iOS 9               TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Safari 9 OS X 10.11          TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Safari 10 OS X 10.12         TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Safari 12.1 (iOS 12.2)       TLSv1.3 TLS_CHACHA20_POLY1305_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Safari 13.0 (macOS 10.14.6)  TLSv1.3 TLS_CHACHA20_POLY1305_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Apple ATS 9 iOS 9            TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Java 6u45                    TLSv1.0 AES128-SHA, No FS
+ Java 7u25                    TLSv1.0 ECDHE-ECDSA-AES128-SHA, [0;32m256 bit ECDH (P-256)[m
+ Java 8u161                   TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Java 11.0.2 (OpenJDK)        TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Java 12.0.1 (OpenJDK)        TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m256 bit ECDH (P-256)[m
+ OpenSSL 1.0.2e               TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ OpenSSL 1.1.0l (Debian)      TLSv1.2 ECDHE-ECDSA-CHACHA20-POLY1305, [0;32m253 bit ECDH (X25519)[m
+ OpenSSL 1.1.1d (Debian)      TLSv1.3 TLS_AES_256_GCM_SHA384, [0;32m253 bit ECDH (X25519)[m
+ Thunderbird (68.3)           TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+
+[7m Done 2021-08-02 23:26:35 [2177s] -->> 142.251.12.105:443 (www.google.com) <<--[m
+
+------------------------------------------------------------------------------------------------------------------------------------
+[7m Start 2021-08-02 23:26:36        -->> 142.251.12.106:443 (www.google.com) <<--[m
+
+ Further IP addresses:   142.251.12.103 142.251.12.105 142.251.12.99 142.251.12.104 142.251.12.147 2404:6800:4003:c01::69 2404:6800:4003:c01::93 2404:6800:4003:c01::6a 2404:6800:4003:c01::68 
+ rDNS (142.251.12.106):  --
+ Service detected:       HTTP
+
+
+[1m[4m Testing protocols [m[4mvia sockets except NPN+ALPN [m
+
+[1m SSLv2      [m[1;32mnot offered (OK)[m
+[1m SSLv3      [m[1;32mnot offered (OK)[m
+[1m TLS 1      [m[1;33moffered[m (deprecated)
+[1m TLS 1.1    [m[1;33moffered[m (deprecated)
+[1m TLS 1.2    [m[1;32moffered (OK)[m
+[1m TLS 1.3    [m[1;32moffered (OK)[m: final
+[1m NPN/SPDY   [mnot offered
+[1m ALPN/HTTP2 [m[0;32mh2[m, http/1.1, grpc-exp (offered)
+
+[1m[4m Testing cipher categories [m
+
+[1m NULL ciphers (no encryption)                  [m[1;32mnot offered (OK)[m
+[1m Anonymous NULL Ciphers (no authentication)    [m[1;32mnot offered (OK)[m
+[1m Export ciphers (w/o ADH+NULL)                 [m[1;32mnot offered (OK)[m
+[1m LOW: 64 Bit + DES, RC[2,4] (w/o export)       [m[0;32mnot offered (OK)[m
+[1m Triple DES Ciphers / IDEA                     [m[0;33moffered[m
+[1m Obsolete: SEED + 128+256 Bit CBC cipher       [m[1;33moffered[m
+[1m Strong encryption (AEAD ciphers)              [m[1;32moffered (OK)[m
+
+
+[1m[4m Testing robust (perfect) forward secrecy[m[4m, (P)FS -- omitting Null Authentication/Encryption, 3DES, RC4 [m
+
+[0;32m PFS is offered (OK)[m          TLS_AES_256_GCM_SHA384 TLS_CHACHA20_POLY1305_SHA256 ECDHE-RSA-AES256-GCM-SHA384 ECDHE-ECDSA-AES256-GCM-SHA384 ECDHE-RSA-AES256-SHA ECDHE-ECDSA-AES256-SHA
+                              ECDHE-ECDSA-CHACHA20-POLY1305 ECDHE-RSA-CHACHA20-POLY1305 TLS_AES_128_GCM_SHA256 ECDHE-RSA-AES128-GCM-SHA256 ECDHE-ECDSA-AES128-GCM-SHA256 ECDHE-RSA-AES128-SHA
+                              ECDHE-ECDSA-AES128-SHA 
+[1m Elliptic curves offered:     [m[0;32mprime256v1[m [0;32mX25519[m 
+
+
+[1m[4m Testing server preferences [m
+
+[1m Has server cipher order?     [m[0;32myes (OK)[m -- only for < TLS 1.3
+[1m Negotiated protocol          [m[1;32mTLSv1.3[m
+[1m Negotiated cipher            [m[1;32mTLS_AES_256_GCM_SHA384[m, [0;32m253 bit ECDH (X25519)[m
+[1m Cipher order[m
+    TLSv1:     ECDHE-ECDSA-AES128-SHA ECDHE-ECDSA-AES256-SHA ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-SHA AES128-SHA AES256-SHA DES-CBC3-SHA 
+    TLSv1.1:   ECDHE-ECDSA-AES128-SHA ECDHE-ECDSA-AES256-SHA ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-SHA AES128-SHA AES256-SHA DES-CBC3-SHA 
+    TLSv1.2:   ECDHE-ECDSA-CHACHA20-POLY1305 ECDHE-ECDSA-AES128-GCM-SHA256 ECDHE-ECDSA-AES256-GCM-SHA384 ECDHE-ECDSA-AES128-SHA ECDHE-ECDSA-AES256-SHA ECDHE-RSA-CHACHA20-POLY1305
+               ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-SHA AES128-GCM-SHA256 AES256-GCM-SHA384 AES128-SHA AES256-SHA DES-CBC3-SHA 
+
+
+[1m[4m Testing server defaults (Server Hello) [m
+
+[1m TLS extensions (standard)    [m"renegotiation info/#65281" "EC point formats/#11" "next protocol/#13172" "key share/#51" "supported versions/#43" "extended master secret/#23"
+                              "application layer protocol negotiation/#16"
+[1m Session Ticket RFC 5077 hint [mno -- no lifetime advertised
+[1m SSL Session ID support       [myes
+[1m Session Resumption           [mTickets no, ID: yes
+[1m TLS clock skew[m               0 sec from localtime
+
+  [1m[4mServer Certificate #1[m
+  [1m Signature Algorithm          [m[0;32mSHA256 with RSA[m
+  [1m Server key size              [mRSA 2048 bits
+  [1m Server key usage             [mDigital Signature, Key Encipherment
+  [1m Server extended key usage    [mTLS Web Server Authentication
+  [1m Serial / Fingerprints        [mACD73447EE5167780300000000CC58E6 / SHA1 93C5EF1413D058704F4F3C5BE8A57FFC782966C7
+                                SHA256 FFCF8D78FDE7D15721025974632B74254A88A89C6170344698E29EE7F1FE1EB0
+  [1m Common Name (CN)             [m[3mwww.google.com [m
+  [1m subjectAltName (SAN)         [m[3mwww.google.com [m
+  [1m Issuer                       [m[3mGTS CA 1O1[m ([3mGoogle Trust Services[m from [3mUS[m)
+  [1m Trust (hostname)             [m[0;32mOk via SAN[m (same w/o SNI)
+  [1m Chain of trust[m               [0;32mOk   [m[0;35m[m
+  [1m EV cert[m (experimental)       no 
+  [1m ETS/"eTLS"[m, visibility info  not present
+  [1m Certificate Validity (UTC)   [m[0;33mexpires < 60 days (48)[m (2021-06-28 09:42 --> 2021-09-20 09:42)
+  [1m # of certificates provided[m   2
+  [1m Certificate Revocation List  [mhttp://crl.pki.goog/GTS1O1core.crl
+  [1m OCSP URI                     [mhttp://ocsp.pki.goog/gts1o1core
+  [1m OCSP stapling                [m[1;33mnot offered[m
+  [1m OCSP must staple extension   [m--
+  [1m DNS CAA RR[m (experimental)    [0;32mavailable[m - please check for match with "Issuer" above: [3missue=pki.goog[m
+  [1m Certificate Transparency     [m[0;32myes[m (certificate extension)
+
+  [1m[4mServer Certificate #2[m
+  [1m Signature Algorithm          [m[0;32mSHA256 with RSA[m
+  [1m Server key size              [mEC [0;32m256[m bits
+  [1m Server key usage             [mDigital Signature
+  [1m Server extended key usage    [mTLS Web Server Authentication
+  [1m Serial / Fingerprints        [m4E5A45D05E6C7C6F0300000000CC58E7 / SHA1 9F0E422D88E47BDF0866471663480284A489DE8E
+                                SHA256 58CB2EC05207C490C688A7464BF245EDA35F248D50DC25A12BB65655A2FC9F8E
+  [1m Common Name (CN)             [m[3mwww.google.com [m
+  [1m subjectAltName (SAN)         [m[3mwww.google.com [m
+  [1m Issuer                       [m[3mGTS CA 1O1[m ([3mGoogle Trust Services[m from [3mUS[m)
+  [1m Trust (hostname)             [m[0;32mOk via SAN[m (same w/o SNI)
+  [1m Chain of trust[m               [0;32mOk   [m[0;35m[m
+  [1m EV cert[m (experimental)       no 
+  [1m ETS/"eTLS"[m, visibility info  not present
+  [1m Certificate Validity (UTC)   [m[0;33mexpires < 60 days (48)[m (2021-06-28 09:42 --> 2021-09-20 09:42)
+  [1m # of certificates provided[m   2
+  [1m Certificate Revocation List  [mhttp://crl.pki.goog/GTS1O1core.crl
+  [1m OCSP URI                     [mhttp://ocsp.pki.goog/gts1o1core
+  [1m OCSP stapling                [m[1;33mnot offered[m
+  [1m OCSP must staple extension   [m--
+  [1m DNS CAA RR[m (experimental)    [0;32mavailable[m - please check for match with "Issuer" above: [3missue=pki.goog[m
+  [1m Certificate Transparency     [m[0;32myes[m (certificate extension)
+
+
+[1m[4m Testing HTTP header response @ "/" [m
+
+[1m HTTP Status Code           [m  200 OK
+[1m HTTP clock skew              [m0 sec from localtime
+[1m Strict Transport Security    [m[1;33mnot offered[m
+[1m Public Key Pinning           [m--
+[1m Server banner                [mgws
+[1m Application banner           [m--
+[1m Cookie(s)                    [m2 issued: [0;32m1/2[m secure, [0;32m1/2[m HttpOnly
+[1m Security headers             [m[0;32mX-Frame-Options[m SAMEORIGIN
+                              [0;32mX-XSS-Protection[m 0
+                              [0;36mCache-Control[m private, max-age=0
+[1m Reverse Proxy banner         [m--
+
+
+[1m[4m Testing vulnerabilities [m
+
+[1m Heartbleed[m (CVE-2014-0160)                [1;32mnot vulnerable (OK)[m, no heartbeat extension
+[1m CCS[m (CVE-2014-0224)                       [1;32mnot vulnerable (OK)[m
+[1m Ticketbleed[m (CVE-2016-9244), experiment.  [1;32mnot vulnerable (OK)[m, no session ticket extension
+[1m ROBOT                                     [m[1;32mnot vulnerable (OK)[m
+[1m Secure Renegotiation (RFC 5746)           [m[1;32msupported (OK)[m
+[1m Secure Client-Initiated Renegotiation     [m[0;32mnot vulnerable (OK)[m
+[1m CRIME, TLS [m(CVE-2012-4929)                [0;32mnot vulnerable (OK)[m
+[1m BREACH[m (CVE-2013-3587)                    [0;31mpotentially NOT ok, uses gzip HTTP compression.[m - only supplied "/" tested
+                                           Can be ignored for static pages or if no secrets in the page
+[1m POODLE, SSL[m (CVE-2014-3566)               [1;32mnot vulnerable (OK)[m, no SSLv3 support
+[1m TLS_FALLBACK_SCSV[m (RFC 7507)              [0;35mCheck failed, unexpected result [m, run testssl -Z --debug=1 and look at /tmp/testssl.FvKM9u/*tls_fallback_scsv.txt
+[1m SWEET32[m (CVE-2016-2183, CVE-2016-6329)    [1;33mVULNERABLE[m, uses 64 bit block ciphers
+[1m FREAK[m (CVE-2015-0204)                     [1;32mnot vulnerable (OK)[m
+[1m DROWN[m (CVE-2016-0800, CVE-2016-0703)      [1;32mnot vulnerable on this host and port (OK)[m
+                                           make sure you don't use this certificate elsewhere with SSLv2 enabled services
+                                           https://censys.io/ipv4?q=FFCF8D78FDE7D15721025974632B74254A88A89C6170344698E29EE7F1FE1EB0 could help you to find out
+[1m LOGJAM[m (CVE-2015-4000), experimental      [0;32mnot vulnerable (OK):[m no DH EXPORT ciphers, no DH key detected with <= TLS 1.2
+[1m BEAST[m (CVE-2011-3389)                     TLS1: [1;33mECDHE-ECDSA-AES128-SHA ECDHE-ECDSA-AES256-SHA ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-SHA AES128-SHA AES256-SHA DES-CBC3-SHA [m
+                                           [1;33mVULNERABLE[m -- but also supports higher protocols  TLSv1.1 TLSv1.2 (likely mitigated)
+[1m LUCKY13[m (CVE-2013-0169), experimental     potentially [1;33mVULNERABLE[m, uses cipher block chaining (CBC) ciphers with TLS. Check patches
+[1m RC4[m (CVE-2013-2566, CVE-2015-2808)        [0;32mno RC4 ciphers detected (OK)[m
+
+
+[1m[4m Testing 370 ciphers via OpenSSL plus sockets against the server, ordered by encryption strength [m
+
+Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Cipher Suite Name (IANA/RFC)
+-----------------------------------------------------------------------------------------------------------------------------
+ x1302   TLS_AES_256_GCM_SHA384            ECDH[0;32m 253[m   AESGCM      256      TLS_AES_256_GCM_SHA384                             
+ x1303   TLS_CHACHA20_POLY1305_SHA256      ECDH[0;32m 253[m   ChaCha20    256      TLS_CHACHA20_POLY1305_SHA256                       
+ xc030   ECDHE-RSA-AES256-GCM-SHA384       ECDH[0;32m 253[m   AESGCM      256      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384              
+ xc02c   ECDHE-ECDSA-AES256-GCM-SHA384     ECDH[0;32m 253[m   AESGCM      256      TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384            
+ xc014   ECDHE-RSA-AES256-SHA              ECDH[0;32m 253[m   AES         256      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA                 
+ xc00a   ECDHE-ECDSA-AES256-SHA            ECDH[0;32m 253[m   AES         256      TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA               
+ xcca9   ECDHE-ECDSA-CHACHA20-POLY1305     ECDH[0;32m 253[m   ChaCha20    256      TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256      
+ xcca8   ECDHE-RSA-CHACHA20-POLY1305       ECDH[0;32m 253[m   ChaCha20    256      TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256        
+ x9d     AES256-GCM-SHA384                 RSA        AESGCM      256      TLS_RSA_WITH_AES_256_GCM_SHA384                    
+ x35     AES256-SHA                        RSA        AES         256      TLS_RSA_WITH_AES_256_CBC_SHA                       
+ x1301   TLS_AES_128_GCM_SHA256            ECDH[0;32m 253[m   AESGCM      128      TLS_AES_128_GCM_SHA256                             
+ xc02f   ECDHE-RSA-AES128-GCM-SHA256       ECDH[0;32m 253[m   AESGCM      128      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256              
+ xc02b   ECDHE-ECDSA-AES128-GCM-SHA256     ECDH[0;32m 253[m   AESGCM      128      TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256            
+ xc013   ECDHE-RSA-AES128-SHA              ECDH[0;32m 253[m   AES         128      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA                 
+ xc009   ECDHE-ECDSA-AES128-SHA            ECDH[0;32m 253[m   AES         128      TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA               
+ x9c     AES128-GCM-SHA256                 RSA        AESGCM      128      TLS_RSA_WITH_AES_128_GCM_SHA256                    
+ x2f     AES128-SHA                        RSA        AES         128      TLS_RSA_WITH_AES_128_CBC_SHA                       
+ x0a     DES-CBC3-SHA                      RSA        3DES        168      TLS_RSA_WITH_3DES_EDE_CBC_SHA                      
+
+
+[1m[4m Running client simulations [m[1m[4m(HTTP) [m[1m[4mvia sockets [m
+
+ Android 4.4.2                TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Android 5.0.0                TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Android 6.0                  TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Android 7.0                  TLSv1.2 ECDHE-ECDSA-CHACHA20-POLY1305, [0;32m253 bit ECDH (X25519)[m
+ Android 8.1 (native)         TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m253 bit ECDH (X25519)[m
+ Android 9.0 (native)         TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Android 10.0 (native)        TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Chrome 74 (Win 10)           TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Chrome 79 (Win 10)           TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Firefox 66 (Win 8.1/10)      TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Firefox 71 (Win 10)          TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ IE 6 XP                      No connection
+ IE 8 Win 7                   TLSv1.0 ECDHE-ECDSA-AES128-SHA, [0;32m256 bit ECDH (P-256)[m
+ IE 8 XP                      TLSv1.0 DES-CBC3-SHA, No FS
+ IE 11 Win 7                  TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ IE 11 Win 8.1                TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ IE 11 Win Phone 8.1          TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ IE 11 Win 10                 TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Edge 15 Win 10               TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m253 bit ECDH (X25519)[m
+ Edge 17 (Win 10)             TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m253 bit ECDH (X25519)[m
+ Opera 66 (Win 10)            TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Safari 9 iOS 9               TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Safari 9 OS X 10.11          TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Safari 10 OS X 10.12         TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Safari 12.1 (iOS 12.2)       TLSv1.3 TLS_CHACHA20_POLY1305_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Safari 13.0 (macOS 10.14.6)  TLSv1.3 TLS_CHACHA20_POLY1305_SHA256, [0;32m253 bit ECDH (X25519)[m
+ Apple ATS 9 iOS 9            TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Java 6u45                    TLSv1.0 AES128-SHA, No FS
+ Java 7u25                    TLSv1.0 ECDHE-ECDSA-AES128-SHA, [0;32m256 bit ECDH (P-256)[m
+ Java 8u161                   TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Java 11.0.2 (OpenJDK)        TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Java 12.0.1 (OpenJDK)        TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m256 bit ECDH (P-256)[m
+ OpenSSL 1.0.2e               TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ OpenSSL 1.1.0l (Debian)      TLSv1.2 ECDHE-ECDSA-CHACHA20-POLY1305, [0;32m253 bit ECDH (X25519)[m
+ OpenSSL 1.1.1d (Debian)      TLSv1.3 TLS_AES_256_GCM_SHA384, [0;32m253 bit ECDH (X25519)[m
+ Thunderbird (68.3)           TLSv1.3 TLS_AES_128_GCM_SHA256, [0;32m253 bit ECDH (X25519)[m
+
+[7m Done 2021-08-02 23:38:57 [2919s] -->> 142.251.12.106:443 (www.google.com) <<--[m
+
+------------------------------------------------------------------------------------------------------------------------------------
+[7m Start 2021-08-02 23:38:58        -->> 142.251.12.103:443 (www.google.com) <<--[m
+
+ Further IP addresses:   142.251.12.106 142.251.12.105 142.251.12.99 142.251.12.104 142.251.12.147 2404:6800:4003:c01::69 2404:6800:4003:c01::93 2404:6800:4003:c01::6a 2404:6800:4003:c01::68 
+ rDNS (142.251.12.103):  --
+ Service detected:       HTTP
+
+
+[1m[4m Testing protocols [m[4mvia sockets except NPN+ALPN [m
+
+[1m SSLv2      [m[1;32mnot offered (OK)[m
+[1m SSLv3      [m[1;32mnot offered (OK)[m
+[1m TLS 1      [m[1;33moffered[m (deprecated)
+[1m TLS 1.1    [m[1;33moffered[m (deprecated)
+[1m TLS 1.2    [m[1;32moffered (OK)[m
+[1m TLS 1.3    [m[1;32moffered (OK)[m: final
+[1m NPN/SPDY   [mnot offered
+[1m ALPN/HTTP2 [m[0;32mh2[m, http/1.1, grpc-exp (offered)
+
+[1m[4m Testing cipher categories [m
+
+[1m NULL ciphers (no encryption)                  [m[1;32mnot offered (OK)[m
+[1m Anonymous NULL Ciphers (no authentication)    [m[1;32mnot offered (OK)[m
+[1m Export ciphers (w/o ADH+NULL)                 [m[1;32mnot offered (OK)[m
+[1m LOW: 64 Bit + DES, RC[2,4] (w/o export)       [m[0;32mnot offered (OK)[m
+[1m Triple DES Ciphers / IDEA                     [m[0;33moffered[m
+[1m Obsolete: SEED + 128+256 Bit CBC cipher       [m[1;33moffered[m
+[1m Strong encryption (AEAD ciphers)              [m[1;32moffered (OK)[m
+
+
+[1m[4m Testing robust (perfect) forward secrecy[m[4m, (P)FS -- omitting Null Authentication/Encryption, 3DES, RC4 [m
+
+[0;32m PFS is offered (OK)[m          TLS_AES_256_GCM_SHA384 TLS_CHACHA20_POLY1305_SHA256 ECDHE-RSA-AES256-GCM-SHA384 ECDHE-ECDSA-AES256-GCM-SHA384 ECDHE-RSA-AES256-SHA ECDHE-ECDSA-AES256-SHA
+                              ECDHE-ECDSA-CHACHA20-POLY1305 ECDHE-RSA-CHACHA20-POLY1305 TLS_AES_128_GCM_SHA256 ECDHE-RSA-AES128-GCM-SHA256 ECDHE-ECDSA-AES128-GCM-SHA256 ECDHE-RSA-AES128-SHA
+                              ECDHE-ECDSA-AES128-SHA 
+[1m Elliptic curves offered:     [m[0;32mprime256v1[m [0;32mX25519[m 
+
+
+[1m[4m Testing server preferences [m
+
+[1m Has server cipher order?     [m[0;32myes (OK)[m -- only for < TLS 1.3
+[1m Negotiated protocol          [m[1;32mTLSv1.3[m
+[1m Negotiated cipher            [m[1;32mTLS_AES_256_GCM_SHA384[m, [0;32m253 bit ECDH (X25519)[m
+[1m Cipher order[m
+    TLSv1:     ECDHE-ECDSA-AES128-SHA ECDHE-ECDSA-AES256-SHA ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-SHA AES128-SHA AES256-SHA DES-CBC3-SHA 
+    TLSv1.1:   ECDHE-ECDSA-AES128-SHA ECDHE-ECDSA-AES256-SHA ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-SHA AES128-SHA AES256-SHA DES-CBC3-SHA 
+    TLSv1.2:   ECDHE-ECDSA-CHACHA20-POLY1305 ECDHE-ECDSA-AES128-GCM-SHA256 ECDHE-ECDSA-AES256-GCM-SHA384 ECDHE-ECDSA-AES128-SHA ECDHE-ECDSA-AES256-SHA ECDHE-RSA-CHACHA20-POLY1305
+               ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-SHA AES128-GCM-SHA256 AES256-GCM-SHA384 AES128-SHA AES256-SHA DES-CBC3-SHA 
+
+
+[1m[4m Testing server defaults (Server Hello) [m
+
+[1m TLS extensions (standard)    [m"renegotiation info/#65281" "EC point formats/#11" "next protocol/#13172" "key share/#51" "supported versions/#43" "extended master secret/#23"
+                              "application layer protocol negotiation/#16"
+[1m Session Ticket RFC 5077 hint [mno -- no lifetime advertised
+[1m SSL Session ID support       [myes
+[1m Session Resumption           [mTickets no, ID: yes
+[1m TLS clock skew[m               -1 sec from localtime
+
+  [1m[4mServer Certificate #1[m
+  [1m Signature Algorithm          [m[0;32mSHA256 with RSA[m
+  [1m Server key size              [mRSA 2048 bits
+  [1m Server key usage             [mDigital Signature, Key Encipherment
+  [1m Server extended key usage    [mTLS Web Server Authentication
+  [1m Serial / Fingerprints        [mACD73447EE5167780300000000CC58E6 / SHA1 93C5EF1413D058704F4F3C5BE8A57FFC782966C7
+                                SHA256 FFCF8D78FDE7D15721025974632B74254A88A89C6170344698E29EE7F1FE1EB0
+  [1m Common Name (CN)             [m[3mwww.google.com [m
+  [1m subjectAltName (SAN)         [m[3mwww.google.com [m
+  [1m Issuer                       [m[3mGTS CA 1O1[m ([3mGoogle Trust Services[m from [3mUS[m)
+  [1m Trust (hostname)             [m[0;32mOk via SAN[m (same w/o SNI)
+  [1m Chain of trust[m               [0;32mOk   [m[0;35m[m
+  [1m EV cert[m (experimental)       no 
+  [1m ETS/"eTLS"[m, visibility info  not present
+  [1m Certificate Validity (UTC)   [m[0;33mexpires < 60 days (48)[m (2021-06-28 09:42 --> 2021-09-20 09:42)
+  [1m # of certificates provided[m   2
+  [1m Certificate Revocation List  [mhttp://crl.pki.goog/GTS1O1core.crl
+  [1m OCSP URI                     [mhttp://ocsp.pki.goog/gts1o1core
+  [1m OCSP stapling                [m[1;33mnot offered[m
+  [1m OCSP must staple extension   [m--
+  [1m DNS CAA RR[m (experimental)    [0;32mavailable[m - please check for match with "Issuer" above: [3missue=pki.goog[m
+  [1m Certificate Transparency     [m[0;32myes[m (certificate extension)
+
+  [1m[4mServer Certificate #2[m
+  [1m Signature Algorithm          [m[0;32mSHA256 with RSA[m
+  [1m Server key size              [mEC [0;32m256[m bits
+  [1m Server key usage             [mDigital Signature
+  [1m Server extended key usage    [mTLS Web Server Authentication
+  [1m Serial / Fingerprints        [m4E5A45D05E6C7C6F0300000000CC58E7 / SHA1 9F0E422D88E47BDF0866471663480284A489DE8E
+                                SHA256 58CB2EC05207C490C688A7464BF245EDA35F248D50DC25A12BB65655A2FC9F8E
+  [1m Common Name (CN)             [m[3mwww.google.com [m
+  [1m subjectAltName (SAN)         [m[3mwww.google.com [m
+  [1m Issuer                       [m[3mGTS CA 1O1[m ([3mGoogle Trust Services[m from [3mUS[m)
+  [1m Trust (hostname)             [m[0;32mOk via SAN[m (same w/o SNI)
+  [1m Chain of trust[m               [0;32mOk   [m[0;35m[m
+  [1m EV cert[m (experimental)       no 
+  [1m ETS/"eTLS"[m, visibility info  not present
+  [1m Certificate Validity (UTC)   [m[0;33mexpires < 60 days (48)[m (2021-06-28 09:42 --> 2021-09-20 09:42)
+  [1m # of certificates provided[m   2
+  [1m Certificate Revocation List  [mhttp://crl.pki.goog/GTS1O1core.crl
+  [1m OCSP URI                     [mhttp://ocsp.pki.goog/gts1o1core
+  [1m OCSP stapling                [m[1;33mnot offered[m
+  [1m OCSP must staple extension   [m--
+  [1m DNS CAA RR[m (experimental)    [0;32mavailable[m - please check for match with "Issuer" above: [3missue=pki.goog[m
+  [1m Certificate Transparency     [m[0;32myes[m (certificate extension)
+
+
+[1m[4m Testing HTTP header response @ "/" [m
+
+[1m HTTP Status Code           [m  200 OK
+[1m HTTP clock skew              [m0 sec from localtime
+[1m Strict Transport Security    [m[1;33mnot offered[m
+[1m Public Key Pinning           [m--
+[1m Server banner                [mgws
+[1m Application banner           [m--
+[1m Cookie(s)                    [m2 issued: [0;32m1/2[m secure, [0;32m1/2[m HttpOnly
+[1m Security headers             [m[0;32mX-Frame-Options[m SAMEORIGIN
+                              [0;32mX-XSS-Protection[m 0
+                              [0;36mCache-Control[m private, max-age=0
+[1m Reverse Proxy banner         [m--
+
+
+[1m[4m Testing vulnerabilities [m
+
+[1m Heartbleed[m (CVE-2014-0160)                [1;32mnot vulnerable (OK)[m, no heartbeat extension
+[1m CCS[m (CVE-2014-0224)                       [1;32mnot vulnerable (OK)[m
+[1m Ticketbleed[m (CVE-2016-9244), experiment.  [1;32mnot vulnerable (OK)[m, no session ticket extension
+[1m ROBOT                                     [m[1;32mnot vulnerable (OK)[m
+[1m Secure Renegotiation (RFC 5746)           [m[1;32msupported (OK)[m
+[1m Secure Client-Initiated Renegotiation     [m[0;32mnot vulnerable (OK)[m
+[1m CRIME, TLS [m(CVE-2012-4929)                [0;32mnot vulnerable (OK)[m
+[1m BREACH[m (CVE-2013-3587)                    [0;31mpotentially NOT ok, uses gzip HTTP compression.[m - only supplied "/" tested
+                                           Can be ignored for static pages or if no secrets in the page
+[1m POODLE, SSL[m (CVE-2014-3566)               [1;32mnot vulnerable (OK)[m, no SSLv3 support
+[1m TLS_FALLBACK_SCSV[m (RFC 7507)              [0;35mCheck failed, unexpected result [m, run testssl -Z --debug=1 and look at /tmp/testssl.FvKM9u/*tls_fallback_scsv.txt
+[1m SWEET32[m (CVE-2016-2183, CVE-2016-6329)    [1;33mVULNERABLE[m, uses 64 bit block ciphers
+[1m FREAK[m (CVE-2015-0204)                     [1;32mnot vulnerable (OK)[m
+[1m DROWN[m (CVE-2016-0800, CVE-2016-0703)      [1;32mnot vulnerable on this host and port (OK)[m
+                                           make sure you don't use this certificate elsewhere with SSLv2 enabled services
+                                           https://censys.io/ipv4?q=FFCF8D78FDE7D15721025974632B74254A88A89C6170344698E29EE7F1FE1EB0 could help you to find out
+[1m LOGJAM[m (CVE-2015-4000), experimental      [0;32mnot vulnerable (OK):[m no DH EXPORT ciphers, no DH key detected with <= TLS 1.2
+[1m BEAST[m (CVE-2011-3389)                     TLS1: [1;33mECDHE-ECDSA-AES128-SHA ECDHE-ECDSA-AES256-SHA ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-SHA AES128-SHA AES256-SHA DES-CBC3-SHA [m
+                                           [1;33mVULNERABLE[m -- but also supports higher protocols  TLSv1.1 TLSv1.2 (likely mitigated)
+[1m LUCKY13[m (CVE-2013-0169), experimental     potentially [1;33mVULNERABLE[m, uses cipher block chaining (CBC) ciphers with TLS. Check patches
+[1m RC4[m (CVE-2013-2566, CVE-2015-2808)        [0;32mno RC4 ciphers detected (OK)[m
+
+
+[1m[4m Testing 370 ciphers via OpenSSL plus sockets against the server, ordered by encryption strength [m
+
+Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Cipher Suite Name (IANA/RFC)
+-----------------------------------------------------------------------------------------------------------------------------
+ x1302   TLS_AES_256_GCM_SHA384            ECDH[0;32m 253[m   AESGCM      256      TLS_AES_256_GCM_SHA384                             
+ x1303   TLS_CHACHA20_POLY1305_SHA256      ECDH[0;32m 253[m   ChaCha20    256      TLS_CHACHA20_POLY1305_SHA256                       
+ xc030   ECDHE-RSA-AES256-GCM-SHA384       ECDH[0;32m 253[m   AESGCM      256      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384              
+ xc02c   ECDHE-ECDSA-AES256-GCM-SHA384     ECDH[0;32m 253[m   AESGCM      256      TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384            
+ xc014   ECDHE-RSA-AES256-SHA              ECDH[0;32m 253[m   AES         256      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA                 
+ xc00a   ECDHE-ECDSA-AES256-SHA            ECDH[0;32m 253[m   AES         256      TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA               
+ xcca9   ECDHE-ECDSA-CHACHA20-POLY1305     ECDH[0;32m 253[m   ChaCha20    256      TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256      
+ xcca8   ECDHE-RSA-CHACHA20-POLY1305       ECDH[0;32m 253[m   ChaCha20    256      TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256        
+ x9d     AES256-GCM-SHA384                 RSA        AESGCM      256      TLS_RSA_WITH_AES_256_GCM_SHA384                    
+ x35     AES256-SHA                        RSA        AES         256      TLS_RSA_WITH_AES_256_CBC_SHA                       
+ x1301   TLS_AES_128_GCM_SHA256            ECDH[0;32m 253[m   AESGCM      128      TLS_AES_128_GCM_SHA256                             
+ xc02f   ECDHE-RSA-AES128-GCM-SHA256       ECDH[0;32m 253[m   AESGCM      128      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256              
+ xc02b   ECDHE-ECDSA-AES128-GCM-SHA256     ECDH[0;32m 253[m   AESGCM      128      TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256            
+ xc013   ECDHE-RSA-AES128-SHA              ECDH[0;32m 253[m   AES         128      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA                 
+ xc009   ECDHE-ECDSA-AES128-SHA            ECDH[0;32m 253[m   AES         128      TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA               
+ x9c     AES128-GCM-SHA256                 RSA        AESGCM      128      TLS_RSA_WITH_AES_128_GCM_SHA256                    
+ x2f     AES128-SHA                        RSA        AES         128      TLS_RSA_WITH_AES_128_CBC_SHA                       
+ x0a     DES-CBC3-SHA                      RSA        3DES        168      TLS_RSA_WITH_3DES_EDE_CBC_SHA                      
+
+
+[1m[4m Running client simulations [m[1m[4m(HTTP) [m[1m[4mvia sockets [m
+
+ Android 4.4.2                TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Android 5.0.0                TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Android 6.0                  TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256, [0;32m256 bit ECDH (P-256)[m
+ Android 7.0                  TLSv1.2 ECDHE-ECDSA-CHACHA20-POLY1305, [0;32m253 bit ECDH (X25519)[m
