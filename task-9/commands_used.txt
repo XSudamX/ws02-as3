@@ -1,0 +1,2 @@
+wget raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Leaked-Databases/phpbb.txt
+hashcat -m 0 "3c2223212b6dde34bcf86b580bdb71d4" phpbb.txt --force -o hashcat.output
