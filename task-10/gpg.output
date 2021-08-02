@@ -1,0 +1,21 @@
+sudamtm@prod-devops-master:~/as3/task-10$ gpg --import 34FB0BA2155A9D20D248BD0E7D11327265445CF2 
+gpg: directory '/home/sudamtm/.gnupg' created
+gpg: keybox '/home/sudamtm/.gnupg/pubring.kbx' created
+gpg: /home/sudamtm/.gnupg/trustdb.gpg: trustdb created
+gpg: key 7D11327265445CF2: public key "Ayoma Wijethunga <ayomawdb@gmail.com>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1
+
+
+sudamtm@prod-devops-master:~/as3/task-10$ gpg --encrypt --armor -r ayomawdb@gmail.com nistspecialpublication800-100.pdf 
+gpg: 32F2268D88105937: There is no assurance this key belongs to the named user
+
+sub  rsa4096/32F2268D88105937 2021-07-05 Ayoma Wijethunga <ayomawdb@gmail.com>
+ Primary key fingerprint: 34FB 0BA2 155A 9D20 D248  BD0E 7D11 3272 6544 5CF2
+      Subkey fingerprint: 0A1B DD38 0AA0 0E70 B440  1B90 32F2 268D 8810 5937
+
+It is NOT certain that the key belongs to the person named
+in the user ID.  If you *really* know what you are doing,
+you may answer the next question with yes.
+
+Use this key anyway? (y/N) y

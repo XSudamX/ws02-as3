@@ -1,0 +1,3 @@
+wget https://keys.openpgp.org/vks/v1/by-fingerprint/34FB0BA2155A9D20D248BD0E7D11327265445CF2
+gpg --import 34FB0BA2155A9D20D248BD0E7D11327265445CF2 
+gpg --encrypt --armor -r ayomawdb@gmail.com nistspecialpublication800-100.pdf

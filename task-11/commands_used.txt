@@ -1,0 +1,3 @@
+sudo gpg --full-generate-key
+gpg --send-keys --keyserver pgp.mit.edu F2E654C8486F6640871085BAA775046618616482
+gpg --send-keys --keyserver keys.openpgp.org F2E654C8486F6640871085BAA775046618616482
